@@ -59,9 +59,8 @@
 					<ul class="nav navbar-nav navbar-right">
 				    	<li><a href="">NOS PRODUITS</a></li>
 				    	<li><a href="">NOS ACTUALITES</a></li>
-				    	<li><a href="">VOTRE RESTAURANT</a></li>
-				    	<li><a href="#">CONTACT</a></li>
-                                        <li><a href="PageWeb/login.jsp">SE CONNECTER</a></li>
+				    	<li><a href="">CONTACT</a></li>
+                                        <li><a href="PageWeb/connexion.jsp">SE CONNECTER</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->
