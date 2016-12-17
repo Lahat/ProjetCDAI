@@ -103,33 +103,40 @@
                                                                              <div id="register" class="animate form">
                                                                                  <form  action="" autocomplete="on"> 
                                                                                      <h1> S'inscrire </h1>
-                                                                                      <p> 
-                                                                                         <label for="nom" class="uname" data-icon="u">Nom : </label>
-                                                                                         <input id="nom" name="nom" required="required" type="text" placeholder="Nom" />
-                                                                                     </p>
-                                                                                     <p> 
-                                                                                         <label for="prenom" class="uname" data-icon="u">Prénom : </label>
-                                                                                         <input id="prenom" name="prenom" required="required" type="text" placeholder="Prénom" />
-                                                                                     </p>
-                                                                                     <p> 
-                                                                                         <label for="tel" class="uname" data-icon="u">Téléphone : </label>
-                                                                                         <input id="telephone" name="tel" required="required" type="text" placeholder="Téléphone" />
-                                                                                     </p>
-                                                                                     <p> 
-                                                                                         <label for="adresse" class="uname" data-icon="u">Adresse : </label>
-                                                                                         <input id="adresse" name="tel" required="required" type="text" placeholder="Adresse" />
-                                                                                     </p>
-                                                                                     <p> 
-                                                                                         <label for="login" class="login" data-icon="e" > Login : </label>
-                                                                                         <input id="passwordsignup" name="password" required="required" type="text" placeholder="Votre email"/> 				</p>
-                                                                                     <p> 
-                                                                                         <label for="mdp" class="uname" data-icon="u">Mot de Passe : </label>
-                                                                                         <input id="mdp" name="mdp" required="required" type="text" placeholder="Mot de passe" />
-                                                                                     </p>
-                                                                                     <p class="signin button"> 
-                                                                                         <input type="submit" value="Valider"/> 
-                                                                                         <input type="reset" value="Annuler"/>
-                                                                                     </p>
+                                                                                     <fieldset>
+                                                                                         <legend>Vos Coordonnées : </legend>
+                                                                                         <p> 
+                                                                                             <label>Nom </label> : <input id="nom" name="nom" required="required" type="text" placeholder="Nom" />
+                                                                                         </p>
+                                                                                        <p> 
+                                                                                            <label>Prénom </label> : <input id="prenom" name="prenom" required="required" type="text" placeholder="Prénom" />
+                                                                                        </p>
+                                                                                        <p> 
+                                                                                            <label>Téléphone </label> : <input id="telephone" name="tel" required="required" type="text" placeholder="Téléphone" />
+                                                                                        </p>
+                                                                                        <p> 
+                                                                                            <label>Adresse </label> : <input id="adresse" name="tel" required="required" type="text" placeholder="Adresse" />
+                                                                                        </p>
+                                                                                        <p> 
+                                                                                            <label> Login </label> : <input id="passwordsignup" name="password" required="required" type="text" placeholder="Votre email"/> 				</p>
+                                                                                        </p> 
+                                                                                        <p>
+                                                                                            <label>Mot de Passe </label> : <input id="mdp" name="mdp" required="required" type="password" placeholder="Mot de passe" />
+                                                                                        </p>
+                                                                                     </fieldset>
+                                                                                     <fieldset>
+                                                                                         <legend>Profil</legend>
+                                                                                         <p> 
+                                                                                             <select name="profil" id="profil">
+                                                                                                 <option value="Client">Client</option>
+                                                                                                 <option value="restaurateur">Restaurateur</option>
+                                                                                             </select>
+                                                                                         </p>
+                                                                                     </fieldset>
+                                                                                     <div class="button"> 
+                                                                                         <button type="submit">Valider </button>
+                                                                                         <button type="reset">Annuler </button>
+                                                                                     </div>
                                                                                  </form>
                                                                          </div>
                                                                      </div>
