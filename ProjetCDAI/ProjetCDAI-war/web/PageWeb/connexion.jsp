@@ -105,13 +105,11 @@
 			<form  action="" autocomplete="on"> 
 				<h1> Se Connecter </h1> 
 				<p> 
-					<label for="login" class="login" data-icon="e" > Login : </label>
-                                        <input id="passwordsignup" name="password" required="required" type="text" placeholder="Login"/> 
+					<label> Login </label> : <input id="passwordsignup" name="password" required="required" type="text" placeholder="Login"/> 
 				</p>
 				
 				<p> 
-					<label for="mdp" class="pwd" data-icon="e" > Mot de passe : </label>
-                                        <input id="passwordsignup" name="password" required="required" type="text" placeholder="mot de passe"/> 
+					<label> Mot de passe</label> : <input id="passwordsignup" name="password" required="required" type="text" placeholder="mot de passe"/> 
 				</p>
 				
 				<p class="signin button"> 

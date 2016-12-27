@@ -57,10 +57,10 @@
 
 				<div class="collapse navbar-collapse" id="st-navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
-				    	<li><a href="">NOS PRODUITS</a></li>
-				    	<li><a href="">NOS ACTUALITES</a></li>
+				    	<li><a href="">ANNONCES</a></li>
+				    	<li><a href="">LES MENUS</a></li>
 				    	<li><a href="">CONTACT</a></li>
-                                        <li><a href="">SE CONNECTER</a></li>
+                                        <li><a href="">SE DECONNECTER</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->
@@ -75,8 +75,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title">
-						<h4>Bienvenue dans votre site en ligne de Reservation de restaurant</h4>
-						<span class="st-border"></span>
+						<h4>Vous êtes connecter en tant que restaurateur</h4>
 					</div>
 				</div>
 			</div>
@@ -95,42 +94,10 @@
 						<article>
 							<div class="post-slider">
                                                             <div class="row jumbotron">
-                                                                <div class="col-sm-8">
-                                                                     <div id="container_demo" >
-	<!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
-	<a class="hiddenanchor" id="toregister"></a>
-	<a class="hiddenanchor" id="tologin"></a>
-	<div id="wrapper">
-		<div id="register" class="animate form">
-			<form  action="" autocomplete="on"> 
-				<h1> Se Connecter </h1> 
-				<p> 
-					<label for="login" class="login" data-icon="e" > Login : </label>
-                                        <input id="passwordsignup" name="password" required="required" type="text" placeholder="Login"/> 
-				</p>
-				
-				<p> 
-					<label for="mdp" class="pwd" data-icon="e" > Mot de passe : </label>
-                                        <input id="passwordsignup" name="password" required="required" type="text" placeholder="mot de passe"/> 
-				</p>
-				
-				<p class="signin button"> 
-					<input type="submit" value="Valider"/> 
-				</p>
-				<p class="change_link">  
-					Pas encore membre ?
-                                        <a href="inscription.jsp" class="to_register"> S'inscrire </a>
-				</p>
-			</form>
-		</div>
-		
-	</div>
-</div> 
-                                                                </div>
+                                                             
                                                                
                                                             </div>
                                                         </div>
-                                                    <h4 class="post-title"><a href="">Au Coeur de vos d&eacute;lices</a></h4>
                                                 </article>
                                         </div>
                                         <hr>
@@ -158,11 +125,8 @@
                                 <div class="sidebar-widget">
                                     <h4 class="sidebar-title">NOS PRODUITS</h4>
                                     <ul>
-                                        <li><a href="">NOS ANNONCES</a></li>
-                                        <li><a href="">NOS MENU</a></li>
-                                        <li><a href="">NOS PLATS DU JOURS</a></li>
-                                        <li><a href="">NOS SANDWICHS</a></li>
-                                        <li><a href="">COFFRET SPECIALE</a></li>
+                                        <li><a href="">AJOUTER DES ANNONCES</a></li>
+                                        <li><a href="">VALIDER UNE RESERVATION</a></li>
                                     </ul>
                                 </div>
                             </div>
