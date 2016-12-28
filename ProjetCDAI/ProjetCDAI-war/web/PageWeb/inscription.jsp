@@ -101,30 +101,30 @@
                                                                          <a class="hiddenanchor" id="tologin"></a>
                                                                          <div id="wrapper">
                                                                              <div id="register" class="animate form">
-                                                                                 <form  action="" autocomplete="on"> 
+                                                                                 <form  action="dashboard_Restaurateur.jsp" autocomplete="on"> 
                                                                                      <h1> S'inscrire </h1>
                                                                                      <fieldset>
                                                                                          <legend>Vos Coordonnées : </legend>
-                                                                                         <p> 
-                                                                                             <label>Nom </label> : <input id="nom" name="nom" required="required" type="text" placeholder="Nom" />
-                                                                                         </p>
-                                                                                        <p> 
-                                                                                            <label>Prénom </label> : <input id="prenom" name="prenom" required="required" type="text" placeholder="Prénom" />
-                                                                                        </p>
-                                                                                        <p> 
-                                                                                            <label>Téléphone </label> : <input id="telephone" name="tel" required="required" type="text" placeholder="Téléphone" />
-                                                                                        </p>
-                                                                                        <p> 
-                                                                                            <label>Adresse </label> : <input id="adresse" name="tel" required="required" type="text" placeholder="Adresse" />
-                                                                                        </p>
-                                                                                        <p> 
-                                                                                            <label> Login </label> : <input id="passwordsignup" name="password" required="required" type="text" placeholder="Votre email"/> 				</p>
-                                                                                        </p> 
-                                                                                        <p>
-                                                                                            <label>Mot de Passe </label> : <input id="mdp" name="mdp" required="required" type="password" placeholder="Mot de passe" />
-                                                                                        </p>
-                                                                                     </fieldset>
-                                                                                     <fieldset>
+                                                                                         <table>
+                                                                                             <tr><th>Nom : </th>
+                                                                                                 <td><input id="nom" name="nom" required="required" type="text" placeholder="Nom" /></td>
+                                                                                             </tr>
+                                                                                             <tr><th>Prénom : </th>
+                                                                                                 <td><input id="prenom" name="prenom" required="required" type="text" placeholder="Prénom" /></td>
+                                                                                             </tr>
+                                                                                             <tr><th>Téléphone : </th>
+                                                                                                 <td><input id="telephone" name="tel" required="required" type="text" placeholder="Téléphone" /></td>
+                                                                                             </tr>
+                                                                                             <tr><th>Adresse : </th>
+                                                                                                 <td><input id="prenom" name="adresse" required="required" type="text" placeholder="Adresse" /></td>
+                                                                                             </tr>
+                                                                                             <tr><th>Login : </th>
+                                                                                                 <td><input id="passwordsignup" name="password" required="required" type="text" placeholder="Votre email"/> </td>
+                                                                                             </tr><br>
+                                                                                             <tr><th>Mot de Passe : </th>
+                                                                                                 <td><input id="mdp" name="mdp" required="required" type="password" placeholder="Mot de passe" /></td>
+                                                                                             </tr>
+                                                                                         </table>
                                                                                          <legend>Profil</legend>
                                                                                          <p> 
                                                                                              <select name="profil" id="profil">
@@ -134,8 +134,8 @@
                                                                                          </p>
                                                                                      </fieldset>
                                                                                      <div class="button"> 
-                                                                                         <button type="submit">Valider </button>
-                                                                                         <button type="reset">Annuler </button>
+                                                                                         <input type="submit" value="Valider">
+                                                                                         <input type="reset" value="Annuler">
                                                                                      </div>
                                                                                  </form>
                                                                          </div>

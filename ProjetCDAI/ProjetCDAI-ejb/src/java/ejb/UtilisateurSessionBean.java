@@ -5,6 +5,7 @@
  */
 package ejb;
 
+import entity.Inscription;
 import entity.Utilisateur;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -29,4 +30,24 @@ public class UtilisateurSessionBean extends AbstractFacade<Utilisateur> implemen
         super(Utilisateur.class);
     }
     
+    
+    
+
+    @Override
+    public boolean insertUtilisateur(String nom, String prenom, String adresse, String mail, String mdp, String Profil) {
+        try {
+          Inscription i = new Inscription();
+          i.setNom(nom);
+          i.setPrenom(prenom);
+          i.setAdresse(adresse);
+          i.setLogin(Profil);
+          i.setProfil(Profil);
+          em.persist(i);
+          return true;
+         
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+        return false;
+    }
 }

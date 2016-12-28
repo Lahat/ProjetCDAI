@@ -104,20 +104,22 @@
 		<div id="register" class="animate form">
 			<form  action="" autocomplete="on"> 
 				<h1> Se Connecter </h1> 
-				<p> 
-					<label> Login </label> : <input id="passwordsignup" name="password" required="required" type="text" placeholder="Login"/> 
-				</p>
-				
-				<p> 
-					<label> Mot de passe</label> : <input id="passwordsignup" name="password" required="required" type="text" placeholder="mot de passe"/> 
-				</p>
-				
-				<p class="signin button"> 
-					<input type="submit" value="Valider"/> 
-				</p>
-				<p class="change_link">  
+                                <fieldset>
+                                    <legend>Vos Identifiants : </legend>
+                                    <table>
+                                        <tr><th>Login : </th>
+                                            <td><input id="passwordsignup" name="password" required="required" type="text" placeholder="Login"/> </td>
+                                        </tr>
+                                        <tr><th>Mot de Passe : </th>
+                                            <td> <input id="passwordsignup" name="password" required="required" type="text" placeholder="mot de passe"/> </td>
+                                        </tr>
+                                    </table>
+                                    <p class="signin button">
+                                        <input type="submit" value="Valider"/> 
+                                    </p>
+                                    <p class="change_link">  
 					Pas encore membre ?
-                                        <a href="inscription.jsp" class="to_register"> S'inscrire </a>
+                                        <a href="inscription.jsp" class="to_register"> Clicker ici </a>
 				</p>
 			</form>
 		</div>

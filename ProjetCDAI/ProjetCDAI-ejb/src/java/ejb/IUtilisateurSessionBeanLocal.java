@@ -29,5 +29,7 @@ public interface IUtilisateurSessionBeanLocal {
     List<Utilisateur> findRange(int[] range);
 
     int count();
+
+    boolean insertUtilisateur(String nom, String prenom, String adresse, String mail, String mdp, String Profil);
     
 }
