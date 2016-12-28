@@ -75,7 +75,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title">
-						<h4>Vous êtes connecter en tant que restaurateur</h4>
+						<h4>Vous êtes connecté en tant que restaurateur</h4>
 					</div>
 				</div>
 			</div>

@@ -102,7 +102,7 @@
 	<a class="hiddenanchor" id="tologin"></a>
 	<div id="wrapper">
 		<div id="register" class="animate form">
-			<form  action="" autocomplete="on"> 
+                    <form  action="dashboard_Restaurateur.jsp" autocomplete="on"> 
 				<h1> Se Connecter </h1> 
                                 <fieldset>
                                     <legend>Vos Identifiants : </legend>
@@ -111,7 +111,7 @@
                                             <td><input id="passwordsignup" name="password" required="required" type="text" placeholder="Login"/> </td>
                                         </tr>
                                         <tr><th>Mot de Passe : </th>
-                                            <td> <input id="passwordsignup" name="password" required="required" type="text" placeholder="mot de passe"/> </td>
+                                            <td> <input id="passwordsignup" name="password" required="required" type="password" placeholder="mot de passe"/> </td>
                                         </tr>
                                     </table>
                                     <p class="signin button">
@@ -119,7 +119,7 @@
                                     </p>
                                     <p class="change_link">  
 					Pas encore membre ?
-                                        <a href="inscription.jsp" class="to_register"> Clicker ici </a>
+                                        <a href="inscription.jsp" class="to_register"> Cliquer ici </a>
 				</p>
 			</form>
 		</div>
