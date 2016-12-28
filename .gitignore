@@ -1,6 +1,11 @@
 /ProjetCDAI/nbproject/private/
+<<<<<<< HEAD
 /ProjetCDAI/ProjetCDAI-war/nbproject/private/
 /ProjetCDAI/ProjetCDAI-ejb/nbproject/private/
+=======
+/ProjetCDAI/ProjetCDAI-ejb/nbproject/private/
+/ProjetCDAI/ProjetCDAI-war/nbproject/private/
+>>>>>>> 9843ee032f149a76de7a414367c9f579de3bf7d1
 /ProjetCDAI/ProjetCDAI-war/build/
 /ProjetCDAI/ProjetCDAI-ejb/dist/
 /ProjetCDAI/ProjetCDAI-ejb/build/
