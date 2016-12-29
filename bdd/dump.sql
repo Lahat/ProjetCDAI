@@ -1,3 +1,12 @@
+/*Pour avoir la meme structure de la base de données : 
+1- Créer sous pgAdmin une base de données "laCuillere" (CD sur Databases/create/Database)
+2- Ensuite créer un schèma "laCuillere"
+3- Copier la structure de toutes les tables
+4- CD sur la base laCuillere/Query tools
+5- Coller la structure dans le champ SQL
+6- Appuyer sur F5 pour l'exécuter
+Toutes les tables seront créée sur la base. 
+*/
 -- Database: laCuillere
 
 -- DROP DATABASE "laCuillere";
