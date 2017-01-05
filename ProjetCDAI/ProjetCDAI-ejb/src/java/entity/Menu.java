@@ -19,23 +19,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author izilife
+ * @author Lahat
  */
 @Entity
 @Table(name = "menu")
 @XmlRootElement
 @NamedQueries({
-<<<<<<< HEAD
     @NamedQuery(name = "Menu.findAll", query = "SELECT m FROM Menu m")
     , @NamedQuery(name = "Menu.findByIdmenu", query = "SELECT m FROM Menu m WHERE m.idmenu = :idmenu")
     , @NamedQuery(name = "Menu.findByPrix", query = "SELECT m FROM Menu m WHERE m.prix = :prix")
     , @NamedQuery(name = "Menu.findByLibelle", query = "SELECT m FROM Menu m WHERE m.libelle = :libelle")})
-=======
-    @NamedQuery(name = "Menu.findAll", query = "SELECT m FROM Menu m"),
-    @NamedQuery(name = "Menu.findByIdmenu", query = "SELECT m FROM Menu m WHERE m.idmenu = :idmenu"),
-    @NamedQuery(name = "Menu.findByPrix", query = "SELECT m FROM Menu m WHERE m.prix = :prix"),
-    @NamedQuery(name = "Menu.findByLibelle", query = "SELECT m FROM Menu m WHERE m.libelle = :libelle")})
->>>>>>> 1021a2915c99e3dedea954c0c3ee0a92147bf3d0
 public class Menu implements Serializable {
 
     private static final long serialVersionUID = 1L;

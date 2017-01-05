@@ -17,13 +17,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.faces.application.FacesMessage;
-import javax.faces.bean.ManagedBean;
-import javax.faces.context.FacesContext;
-import javax.faces.event.ActionEvent;
- 
-import org.primefaces.context.RequestContext;
- 
 
 /**
  *
@@ -37,7 +30,6 @@ import org.primefaces.context.RequestContext;
     , @NamedQuery(name = "Connexion.findById", query = "SELECT c FROM Connexion c WHERE c.id = :id")
     , @NamedQuery(name = "Connexion.findByLogin", query = "SELECT c FROM Connexion c WHERE c.login = :login")
     , @NamedQuery(name = "Connexion.findByMdp", query = "SELECT c FROM Connexion c WHERE c.mdp = :mdp")})
-@ManagedBean
 public class Connexion implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -108,20 +100,5 @@ public class Connexion implements Serializable {
     public String toString() {
         return "entity.Connexion[ id=" + id + " ]";
     }
-     public void login(ActionEvent event) {
-        RequestContext context = RequestContext.getCurrentInstance();
-        FacesMessage message = null;
-        boolean loggedIn = false;
-         
-        if(login != null && login.equals("admin") && mdp != null && mdp.equals("admin")) {
-            loggedIn = true;
-            message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", login);
-        } else {
-            loggedIn = false;
-            message = new FacesMessage(FacesMessage.SEVERITY_WARN, "Loggin Error", "Invalid credentials");
-        }
-         
-        FacesContext.getCurrentInstance().addMessage(null, message);
-        context.addCallbackParam("loggedIn", loggedIn);
-    }
+    
 }

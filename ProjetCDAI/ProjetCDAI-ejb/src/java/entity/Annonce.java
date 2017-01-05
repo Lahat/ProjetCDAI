@@ -19,13 +19,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author izilife
+ * @author Lahat
  */
 @Entity
 @Table(name = "annonce")
 @XmlRootElement
 @NamedQueries({
-<<<<<<< HEAD
     @NamedQuery(name = "Annonce.findAll", query = "SELECT a FROM Annonce a")
     , @NamedQuery(name = "Annonce.findByIdannonce", query = "SELECT a FROM Annonce a WHERE a.idannonce = :idannonce")
     , @NamedQuery(name = "Annonce.findByRestaurateur", query = "SELECT a FROM Annonce a WHERE a.restaurateur = :restaurateur")
@@ -38,20 +37,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Annonce.findByPourcreduction", query = "SELECT a FROM Annonce a WHERE a.pourcreduction = :pourcreduction")
     , @NamedQuery(name = "Annonce.findByIdtelephone", query = "SELECT a FROM Annonce a WHERE a.idtelephone = :idtelephone")
     , @NamedQuery(name = "Annonce.findByIdemail", query = "SELECT a FROM Annonce a WHERE a.idemail = :idemail")})
-=======
-    @NamedQuery(name = "Annonce.findAll", query = "SELECT a FROM Annonce a"),
-    @NamedQuery(name = "Annonce.findByIdannonce", query = "SELECT a FROM Annonce a WHERE a.idannonce = :idannonce"),
-    @NamedQuery(name = "Annonce.findByRestaurateur", query = "SELECT a FROM Annonce a WHERE a.restaurateur = :restaurateur"),
-    @NamedQuery(name = "Annonce.findByRestaurant", query = "SELECT a FROM Annonce a WHERE a.restaurant = :restaurant"),
-    @NamedQuery(name = "Annonce.findByIdmenu", query = "SELECT a FROM Annonce a WHERE a.idmenu = :idmenu"),
-    @NamedQuery(name = "Annonce.findByPlagedispo", query = "SELECT a FROM Annonce a WHERE a.plagedispo = :plagedispo"),
-    @NamedQuery(name = "Annonce.findByNbreplacedispo", query = "SELECT a FROM Annonce a WHERE a.nbreplacedispo = :nbreplacedispo"),
-    @NamedQuery(name = "Annonce.findByDatededispo", query = "SELECT a FROM Annonce a WHERE a.datededispo = :datededispo"),
-    @NamedQuery(name = "Annonce.findByReduction", query = "SELECT a FROM Annonce a WHERE a.reduction = :reduction"),
-    @NamedQuery(name = "Annonce.findByPourcreduction", query = "SELECT a FROM Annonce a WHERE a.pourcreduction = :pourcreduction"),
-    @NamedQuery(name = "Annonce.findByIdtelephone", query = "SELECT a FROM Annonce a WHERE a.idtelephone = :idtelephone"),
-    @NamedQuery(name = "Annonce.findByIdemail", query = "SELECT a FROM Annonce a WHERE a.idemail = :idemail")})
->>>>>>> 1021a2915c99e3dedea954c0c3ee0a92147bf3d0
 public class Annonce implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -22,13 +22,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author izilife
+ * @author Lahat
  */
 @Entity
 @Table(name = "reservation")
 @XmlRootElement
 @NamedQueries({
-<<<<<<< HEAD
     @NamedQuery(name = "Reservation.findAll", query = "SELECT r FROM Reservation r")
     , @NamedQuery(name = "Reservation.findByIdreservation", query = "SELECT r FROM Reservation r WHERE r.idreservation = :idreservation")
     , @NamedQuery(name = "Reservation.findByDate", query = "SELECT r FROM Reservation r WHERE r.date = :date")
@@ -37,16 +36,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Reservation.findByNbrepersonnes", query = "SELECT r FROM Reservation r WHERE r.nbrepersonnes = :nbrepersonnes")
     , @NamedQuery(name = "Reservation.findByIdrestaurant", query = "SELECT r FROM Reservation r WHERE r.idrestaurant = :idrestaurant")
     , @NamedQuery(name = "Reservation.findByIdclient", query = "SELECT r FROM Reservation r WHERE r.idclient = :idclient")})
-=======
-    @NamedQuery(name = "Reservation.findAll", query = "SELECT r FROM Reservation r"),
-    @NamedQuery(name = "Reservation.findByIdreservation", query = "SELECT r FROM Reservation r WHERE r.idreservation = :idreservation"),
-    @NamedQuery(name = "Reservation.findByDate", query = "SELECT r FROM Reservation r WHERE r.date = :date"),
-    @NamedQuery(name = "Reservation.findByHeuredebut", query = "SELECT r FROM Reservation r WHERE r.heuredebut = :heuredebut"),
-    @NamedQuery(name = "Reservation.findByHeurefin", query = "SELECT r FROM Reservation r WHERE r.heurefin = :heurefin"),
-    @NamedQuery(name = "Reservation.findByNbrepersonnes", query = "SELECT r FROM Reservation r WHERE r.nbrepersonnes = :nbrepersonnes"),
-    @NamedQuery(name = "Reservation.findByIdrestaurant", query = "SELECT r FROM Reservation r WHERE r.idrestaurant = :idrestaurant"),
-    @NamedQuery(name = "Reservation.findByIdclient", query = "SELECT r FROM Reservation r WHERE r.idclient = :idclient")})
->>>>>>> 1021a2915c99e3dedea954c0c3ee0a92147bf3d0
 public class Reservation implements Serializable {
 
     private static final long serialVersionUID = 1L;

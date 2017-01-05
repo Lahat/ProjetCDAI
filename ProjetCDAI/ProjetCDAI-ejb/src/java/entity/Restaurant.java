@@ -19,13 +19,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author izilife
+ * @author Lahat
  */
 @Entity
 @Table(name = "restaurant")
 @XmlRootElement
 @NamedQueries({
-<<<<<<< HEAD
     @NamedQuery(name = "Restaurant.findAll", query = "SELECT r FROM Restaurant r")
     , @NamedQuery(name = "Restaurant.findByIdrestaurant", query = "SELECT r FROM Restaurant r WHERE r.idrestaurant = :idrestaurant")
     , @NamedQuery(name = "Restaurant.findByNom", query = "SELECT r FROM Restaurant r WHERE r.nom = :nom")
@@ -36,18 +35,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Restaurant.findByVille", query = "SELECT r FROM Restaurant r WHERE r.ville = :ville")
     , @NamedQuery(name = "Restaurant.findByIdmenu", query = "SELECT r FROM Restaurant r WHERE r.idmenu = :idmenu")
     , @NamedQuery(name = "Restaurant.findByIdprofil", query = "SELECT r FROM Restaurant r WHERE r.idprofil = :idprofil")})
-=======
-    @NamedQuery(name = "Restaurant.findAll", query = "SELECT r FROM Restaurant r"),
-    @NamedQuery(name = "Restaurant.findByIdrestaurant", query = "SELECT r FROM Restaurant r WHERE r.idrestaurant = :idrestaurant"),
-    @NamedQuery(name = "Restaurant.findByNom", query = "SELECT r FROM Restaurant r WHERE r.nom = :nom"),
-    @NamedQuery(name = "Restaurant.findByAdresse", query = "SELECT r FROM Restaurant r WHERE r.adresse = :adresse"),
-    @NamedQuery(name = "Restaurant.findByTelephone", query = "SELECT r FROM Restaurant r WHERE r.telephone = :telephone"),
-    @NamedQuery(name = "Restaurant.findByEmail", query = "SELECT r FROM Restaurant r WHERE r.email = :email"),
-    @NamedQuery(name = "Restaurant.findByCategorie", query = "SELECT r FROM Restaurant r WHERE r.categorie = :categorie"),
-    @NamedQuery(name = "Restaurant.findByVille", query = "SELECT r FROM Restaurant r WHERE r.ville = :ville"),
-    @NamedQuery(name = "Restaurant.findByIdmenu", query = "SELECT r FROM Restaurant r WHERE r.idmenu = :idmenu"),
-    @NamedQuery(name = "Restaurant.findByIdprofil", query = "SELECT r FROM Restaurant r WHERE r.idprofil = :idprofil")})
->>>>>>> 1021a2915c99e3dedea954c0c3ee0a92147bf3d0
 public class Restaurant implements Serializable {
 
     private static final long serialVersionUID = 1L;

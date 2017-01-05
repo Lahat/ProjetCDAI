@@ -19,23 +19,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author izilife
+ * @author Lahat
  */
 @Entity
 @Table(name = "profil")
 @XmlRootElement
 @NamedQueries({
-<<<<<<< HEAD
     @NamedQuery(name = "Profil.findAll", query = "SELECT p FROM Profil p")
     , @NamedQuery(name = "Profil.findByIdprofil", query = "SELECT p FROM Profil p WHERE p.idprofil = :idprofil")
     , @NamedQuery(name = "Profil.findByProfil", query = "SELECT p FROM Profil p WHERE p.profil = :profil")
     , @NamedQuery(name = "Profil.findByCodelibellerole", query = "SELECT p FROM Profil p WHERE p.codelibellerole = :codelibellerole")})
-=======
-    @NamedQuery(name = "Profil.findAll", query = "SELECT p FROM Profil p"),
-    @NamedQuery(name = "Profil.findByIdprofil", query = "SELECT p FROM Profil p WHERE p.idprofil = :idprofil"),
-    @NamedQuery(name = "Profil.findByProfil", query = "SELECT p FROM Profil p WHERE p.profil = :profil"),
-    @NamedQuery(name = "Profil.findByCodelibellerole", query = "SELECT p FROM Profil p WHERE p.codelibellerole = :codelibellerole")})
->>>>>>> 1021a2915c99e3dedea954c0c3ee0a92147bf3d0
 public class Profil implements Serializable {
 
     private static final long serialVersionUID = 1L;
