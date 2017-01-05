@@ -19,12 +19,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Lahat
+ * @author izilife
  */
 @Entity
 @Table(name = "utilisateur")
 @XmlRootElement
 @NamedQueries({
+<<<<<<< HEAD
     @NamedQuery(name = "Utilisateur.findAll", query = "SELECT u FROM Utilisateur u")
     , @NamedQuery(name = "Utilisateur.findByIdutilisateur", query = "SELECT u FROM Utilisateur u WHERE u.idutilisateur = :idutilisateur")
     , @NamedQuery(name = "Utilisateur.findByNom", query = "SELECT u FROM Utilisateur u WHERE u.nom = :nom")
@@ -33,6 +34,17 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Utilisateur.findByAdresse", query = "SELECT u FROM Utilisateur u WHERE u.adresse = :adresse")
     , @NamedQuery(name = "Utilisateur.findByEmail", query = "SELECT u FROM Utilisateur u WHERE u.email = :email")
     , @NamedQuery(name = "Utilisateur.findByMotdepasse", query = "SELECT u FROM Utilisateur u WHERE u.motdepasse = :motdepasse")})
+=======
+    @NamedQuery(name = "Utilisateur.findAll", query = "SELECT u FROM Utilisateur u"),
+    @NamedQuery(name = "Utilisateur.findByIdutilisateur", query = "SELECT u FROM Utilisateur u WHERE u.idutilisateur = :idutilisateur"),
+    @NamedQuery(name = "Utilisateur.findByNom", query = "SELECT u FROM Utilisateur u WHERE u.nom = :nom"),
+    @NamedQuery(name = "Utilisateur.findByPrenom", query = "SELECT u FROM Utilisateur u WHERE u.prenom = :prenom"),
+    @NamedQuery(name = "Utilisateur.findByTelephone", query = "SELECT u FROM Utilisateur u WHERE u.telephone = :telephone"),
+    @NamedQuery(name = "Utilisateur.findByAdresse", query = "SELECT u FROM Utilisateur u WHERE u.adresse = :adresse"),
+    @NamedQuery(name = "Utilisateur.findByEmail", query = "SELECT u FROM Utilisateur u WHERE u.email = :email"),
+    @NamedQuery(name = "Utilisateur.findByMotdepasse", query = "SELECT u FROM Utilisateur u WHERE u.motdepasse = :motdepasse"),
+    @NamedQuery(name = "Utilisateur.findByProfil", query = "SELECT u FROM Utilisateur u WHERE u.profil = :profil")})
+>>>>>>> 1021a2915c99e3dedea954c0c3ee0a92147bf3d0
 public class Utilisateur implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -60,6 +72,12 @@ public class Utilisateur implements Serializable {
     @Size(max = 45)
     @Column(name = "motdepasse")
     private String motdepasse;
+<<<<<<< HEAD
+=======
+    @Size(max = 45)
+    @Column(name = "profil")
+    private String profil;
+>>>>>>> 1021a2915c99e3dedea954c0c3ee0a92147bf3d0
 
     public Utilisateur() {
     }
@@ -110,6 +128,7 @@ public class Utilisateur implements Serializable {
 
     public String getEmail() {
         return email;
+<<<<<<< HEAD
     }
 
     public void setEmail(String email) {
@@ -122,6 +141,28 @@ public class Utilisateur implements Serializable {
 
     public void setMotdepasse(String motdepasse) {
         this.motdepasse = motdepasse;
+=======
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMotdepasse() {
+        return motdepasse;
+    }
+
+    public void setMotdepasse(String motdepasse) {
+        this.motdepasse = motdepasse;
+    }
+
+    public String getProfil() {
+        return profil;
+    }
+
+    public void setProfil(String profil) {
+        this.profil = profil;
+>>>>>>> 1021a2915c99e3dedea954c0c3ee0a92147bf3d0
     }
 
     @Override

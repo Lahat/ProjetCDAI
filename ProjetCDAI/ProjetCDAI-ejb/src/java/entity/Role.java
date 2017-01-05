@@ -19,16 +19,23 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Lahat
+ * @author izilife
  */
 @Entity
 @Table(name = "role")
 @XmlRootElement
 @NamedQueries({
+<<<<<<< HEAD
     @NamedQuery(name = "Role.findAll", query = "SELECT r FROM Role r")
     , @NamedQuery(name = "Role.findByIdrole", query = "SELECT r FROM Role r WHERE r.idrole = :idrole")
     , @NamedQuery(name = "Role.findByCoderole", query = "SELECT r FROM Role r WHERE r.coderole = :coderole")
     , @NamedQuery(name = "Role.findByLibellerole", query = "SELECT r FROM Role r WHERE r.libellerole = :libellerole")})
+=======
+    @NamedQuery(name = "Role.findAll", query = "SELECT r FROM Role r"),
+    @NamedQuery(name = "Role.findByIdrole", query = "SELECT r FROM Role r WHERE r.idrole = :idrole"),
+    @NamedQuery(name = "Role.findByCoderole", query = "SELECT r FROM Role r WHERE r.coderole = :coderole"),
+    @NamedQuery(name = "Role.findByLibellerole", query = "SELECT r FROM Role r WHERE r.libellerole = :libellerole")})
+>>>>>>> 1021a2915c99e3dedea954c0c3ee0a92147bf3d0
 public class Role implements Serializable {
 
     private static final long serialVersionUID = 1L;
