@@ -9,65 +9,76 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Lahat
+ * @author izilife
  */
 @Entity
-@Table(name = "Role")
+@Table(name = "role")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Role.findAll", query = "SELECT r FROM Role r")
-    , @NamedQuery(name = "Role.findByIdCodeRole", query = "SELECT r FROM Role r WHERE r.idCodeRole = :idCodeRole")
-    , @NamedQuery(name = "Role.findByLibelleRole", query = "SELECT r FROM Role r WHERE r.libelleRole = :libelleRole")})
+    @NamedQuery(name = "Role.findAll", query = "SELECT r FROM Role r"),
+    @NamedQuery(name = "Role.findByIdrole", query = "SELECT r FROM Role r WHERE r.idrole = :idrole"),
+    @NamedQuery(name = "Role.findByCoderole", query = "SELECT r FROM Role r WHERE r.coderole = :coderole"),
+    @NamedQuery(name = "Role.findByLibellerole", query = "SELECT r FROM Role r WHERE r.libellerole = :libellerole")})
 public class Role implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idCodeRole")
-    private Integer idCodeRole;
-    @Size(max = 2147483647)
-    @Column(name = "libelleRole")
-    private String libelleRole;
+    @NotNull
+    @Column(name = "idrole")
+    private Short idrole;
+    @Size(max = 45)
+    @Column(name = "coderole")
+    private String coderole;
+    @Size(max = 45)
+    @Column(name = "libellerole")
+    private String libellerole;
 
     public Role() {
     }
 
-    public Role(Integer idCodeRole) {
-        this.idCodeRole = idCodeRole;
+    public Role(Short idrole) {
+        this.idrole = idrole;
     }
 
-    public Integer getIdCodeRole() {
-        return idCodeRole;
+    public Short getIdrole() {
+        return idrole;
     }
 
-    public void setIdCodeRole(Integer idCodeRole) {
-        this.idCodeRole = idCodeRole;
+    public void setIdrole(Short idrole) {
+        this.idrole = idrole;
     }
 
-    public String getLibelleRole() {
-        return libelleRole;
+    public String getCoderole() {
+        return coderole;
     }
 
-    public void setLibelleRole(String libelleRole) {
-        this.libelleRole = libelleRole;
+    public void setCoderole(String coderole) {
+        this.coderole = coderole;
+    }
+
+    public String getLibellerole() {
+        return libellerole;
+    }
+
+    public void setLibellerole(String libellerole) {
+        this.libellerole = libellerole;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idCodeRole != null ? idCodeRole.hashCode() : 0);
+        hash += (idrole != null ? idrole.hashCode() : 0);
         return hash;
     }
 
@@ -78,7 +89,7 @@ public class Role implements Serializable {
             return false;
         }
         Role other = (Role) object;
-        if ((this.idCodeRole == null && other.idCodeRole != null) || (this.idCodeRole != null && !this.idCodeRole.equals(other.idCodeRole))) {
+        if ((this.idrole == null && other.idrole != null) || (this.idrole != null && !this.idrole.equals(other.idrole))) {
             return false;
         }
         return true;
@@ -86,7 +97,7 @@ public class Role implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Role[ idCodeRole=" + idCodeRole + " ]";
+        return "entity.Role[ idrole=" + idrole + " ]";
     }
     
 }

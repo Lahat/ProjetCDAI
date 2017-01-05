@@ -6,133 +6,133 @@
 package entity;
 
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Lahat
+ * @author izilife
  */
 @Entity
-@Table(name = "Annonce")
+@Table(name = "annonce")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Annonce.findAll", query = "SELECT a FROM Annonce a")
-    , @NamedQuery(name = "Annonce.findByRestaurant", query = "SELECT a FROM Annonce a WHERE a.restaurant = :restaurant")
-    , @NamedQuery(name = "Annonce.findByPlageDispo", query = "SELECT a FROM Annonce a WHERE a.plageDispo = :plageDispo")
-    , @NamedQuery(name = "Annonce.findByIdRestaurateur", query = "SELECT a FROM Annonce a WHERE a.idRestaurateur = :idRestaurateur")
-    , @NamedQuery(name = "Annonce.findByNbrePlaceDispo", query = "SELECT a FROM Annonce a WHERE a.nbrePlaceDispo = :nbrePlaceDispo")
-    , @NamedQuery(name = "Annonce.findByTelephone", query = "SELECT a FROM Annonce a WHERE a.telephone = :telephone")
-    , @NamedQuery(name = "Annonce.findByEmail", query = "SELECT a FROM Annonce a WHERE a.email = :email")
-    , @NamedQuery(name = "Annonce.findByDateDeDispo", query = "SELECT a FROM Annonce a WHERE a.dateDeDispo = :dateDeDispo")
-    , @NamedQuery(name = "Annonce.findByReduction", query = "SELECT a FROM Annonce a WHERE a.reduction = :reduction")
-    , @NamedQuery(name = "Annonce.findByPourcReduction", query = "SELECT a FROM Annonce a WHERE a.pourcReduction = :pourcReduction")})
+    @NamedQuery(name = "Annonce.findAll", query = "SELECT a FROM Annonce a"),
+    @NamedQuery(name = "Annonce.findByIdannonce", query = "SELECT a FROM Annonce a WHERE a.idannonce = :idannonce"),
+    @NamedQuery(name = "Annonce.findByRestaurateur", query = "SELECT a FROM Annonce a WHERE a.restaurateur = :restaurateur"),
+    @NamedQuery(name = "Annonce.findByRestaurant", query = "SELECT a FROM Annonce a WHERE a.restaurant = :restaurant"),
+    @NamedQuery(name = "Annonce.findByIdmenu", query = "SELECT a FROM Annonce a WHERE a.idmenu = :idmenu"),
+    @NamedQuery(name = "Annonce.findByPlagedispo", query = "SELECT a FROM Annonce a WHERE a.plagedispo = :plagedispo"),
+    @NamedQuery(name = "Annonce.findByNbreplacedispo", query = "SELECT a FROM Annonce a WHERE a.nbreplacedispo = :nbreplacedispo"),
+    @NamedQuery(name = "Annonce.findByDatededispo", query = "SELECT a FROM Annonce a WHERE a.datededispo = :datededispo"),
+    @NamedQuery(name = "Annonce.findByReduction", query = "SELECT a FROM Annonce a WHERE a.reduction = :reduction"),
+    @NamedQuery(name = "Annonce.findByPourcreduction", query = "SELECT a FROM Annonce a WHERE a.pourcreduction = :pourcreduction"),
+    @NamedQuery(name = "Annonce.findByIdtelephone", query = "SELECT a FROM Annonce a WHERE a.idtelephone = :idtelephone"),
+    @NamedQuery(name = "Annonce.findByIdemail", query = "SELECT a FROM Annonce a WHERE a.idemail = :idemail")})
 public class Annonce implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Column(name = "restaurant")
-    private Character restaurant;
-    @Column(name = "plageDispo")
-    private Serializable plageDispo;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idRestaurateur")
-    private Integer idRestaurateur;
-    @Column(name = "nbrePlaceDispo")
-    private Integer nbrePlaceDispo;
-    @Column(name = "telephone")
-    private Integer telephone;
-    @Column(name = "email")
-    private Character email;
-    @Column(name = "dateDeDispo")
-    @Temporal(TemporalType.DATE)
-    private Date dateDeDispo;
-    @Size(max = 2147483647)
+    @NotNull
+    @Column(name = "idannonce")
+    private Short idannonce;
+    @Size(max = 45)
+    @Column(name = "restaurateur")
+    private String restaurateur;
+    @Size(max = 45)
+    @Column(name = "restaurant")
+    private String restaurant;
+    @Column(name = "idmenu")
+    private Short idmenu;
+    @Size(max = 45)
+    @Column(name = "plagedispo")
+    private String plagedispo;
+    @Column(name = "nbreplacedispo")
+    private Short nbreplacedispo;
+    @Size(max = 45)
+    @Column(name = "datededispo")
+    private String datededispo;
+    @Size(max = 45)
     @Column(name = "reduction")
     private String reduction;
-    @Size(max = 2147483647)
-    @Column(name = "pourcReduction")
-    private String pourcReduction;
-    @JoinColumn(name = "idMenu", referencedColumnName = "idMenu")
-    @ManyToOne(optional = false)
-    private Menu idMenu;
+    @Size(max = 45)
+    @Column(name = "pourcreduction")
+    private String pourcreduction;
+    @Column(name = "idtelephone")
+    private Short idtelephone;
+    @Column(name = "idemail")
+    private Short idemail;
 
     public Annonce() {
     }
 
-    public Annonce(Integer idRestaurateur) {
-        this.idRestaurateur = idRestaurateur;
+    public Annonce(Short idannonce) {
+        this.idannonce = idannonce;
     }
 
-    public Character getRestaurant() {
+    public Short getIdannonce() {
+        return idannonce;
+    }
+
+    public void setIdannonce(Short idannonce) {
+        this.idannonce = idannonce;
+    }
+
+    public String getRestaurateur() {
+        return restaurateur;
+    }
+
+    public void setRestaurateur(String restaurateur) {
+        this.restaurateur = restaurateur;
+    }
+
+    public String getRestaurant() {
         return restaurant;
     }
 
-    public void setRestaurant(Character restaurant) {
+    public void setRestaurant(String restaurant) {
         this.restaurant = restaurant;
     }
 
-    public Serializable getPlageDispo() {
-        return plageDispo;
+    public Short getIdmenu() {
+        return idmenu;
     }
 
-    public void setPlageDispo(Serializable plageDispo) {
-        this.plageDispo = plageDispo;
+    public void setIdmenu(Short idmenu) {
+        this.idmenu = idmenu;
     }
 
-    public Integer getIdRestaurateur() {
-        return idRestaurateur;
+    public String getPlagedispo() {
+        return plagedispo;
     }
 
-    public void setIdRestaurateur(Integer idRestaurateur) {
-        this.idRestaurateur = idRestaurateur;
+    public void setPlagedispo(String plagedispo) {
+        this.plagedispo = plagedispo;
     }
 
-    public Integer getNbrePlaceDispo() {
-        return nbrePlaceDispo;
+    public Short getNbreplacedispo() {
+        return nbreplacedispo;
     }
 
-    public void setNbrePlaceDispo(Integer nbrePlaceDispo) {
-        this.nbrePlaceDispo = nbrePlaceDispo;
+    public void setNbreplacedispo(Short nbreplacedispo) {
+        this.nbreplacedispo = nbreplacedispo;
     }
 
-    public Integer getTelephone() {
-        return telephone;
+    public String getDatededispo() {
+        return datededispo;
     }
 
-    public void setTelephone(Integer telephone) {
-        this.telephone = telephone;
-    }
-
-    public Character getEmail() {
-        return email;
-    }
-
-    public void setEmail(Character email) {
-        this.email = email;
-    }
-
-    public Date getDateDeDispo() {
-        return dateDeDispo;
-    }
-
-    public void setDateDeDispo(Date dateDeDispo) {
-        this.dateDeDispo = dateDeDispo;
+    public void setDatededispo(String datededispo) {
+        this.datededispo = datededispo;
     }
 
     public String getReduction() {
@@ -143,26 +143,34 @@ public class Annonce implements Serializable {
         this.reduction = reduction;
     }
 
-    public String getPourcReduction() {
-        return pourcReduction;
+    public String getPourcreduction() {
+        return pourcreduction;
     }
 
-    public void setPourcReduction(String pourcReduction) {
-        this.pourcReduction = pourcReduction;
+    public void setPourcreduction(String pourcreduction) {
+        this.pourcreduction = pourcreduction;
     }
 
-    public Menu getIdMenu() {
-        return idMenu;
+    public Short getIdtelephone() {
+        return idtelephone;
     }
 
-    public void setIdMenu(Menu idMenu) {
-        this.idMenu = idMenu;
+    public void setIdtelephone(Short idtelephone) {
+        this.idtelephone = idtelephone;
+    }
+
+    public Short getIdemail() {
+        return idemail;
+    }
+
+    public void setIdemail(Short idemail) {
+        this.idemail = idemail;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idRestaurateur != null ? idRestaurateur.hashCode() : 0);
+        hash += (idannonce != null ? idannonce.hashCode() : 0);
         return hash;
     }
 
@@ -173,7 +181,7 @@ public class Annonce implements Serializable {
             return false;
         }
         Annonce other = (Annonce) object;
-        if ((this.idRestaurateur == null && other.idRestaurateur != null) || (this.idRestaurateur != null && !this.idRestaurateur.equals(other.idRestaurateur))) {
+        if ((this.idannonce == null && other.idannonce != null) || (this.idannonce != null && !this.idannonce.equals(other.idannonce))) {
             return false;
         }
         return true;
@@ -181,7 +189,7 @@ public class Annonce implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Annonce[ idRestaurateur=" + idRestaurateur + " ]";
+        return "entity.Annonce[ idannonce=" + idannonce + " ]";
     }
     
 }

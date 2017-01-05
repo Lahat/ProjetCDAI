@@ -6,83 +6,79 @@
 package entity;
 
 import java.io.Serializable;
-import java.util.Collection;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Lahat
+ * @author izilife
  */
 @Entity
-@Table(name = "Profil")
+@Table(name = "profil")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Profil.findAll", query = "SELECT p FROM Profil p")
-    , @NamedQuery(name = "Profil.findByIdProfil", query = "SELECT p FROM Profil p WHERE p.idProfil = :idProfil")
-    , @NamedQuery(name = "Profil.findByCodeLibelleRole", query = "SELECT p FROM Profil p WHERE p.codeLibelleRole = :codeLibelleRole")})
+    @NamedQuery(name = "Profil.findAll", query = "SELECT p FROM Profil p"),
+    @NamedQuery(name = "Profil.findByIdprofil", query = "SELECT p FROM Profil p WHERE p.idprofil = :idprofil"),
+    @NamedQuery(name = "Profil.findByProfil", query = "SELECT p FROM Profil p WHERE p.profil = :profil"),
+    @NamedQuery(name = "Profil.findByCodelibellerole", query = "SELECT p FROM Profil p WHERE p.codelibellerole = :codelibellerole")})
 public class Profil implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idProfil")
-    private Integer idProfil;
-    @Size(max = 2147483647)
-    @Column(name = "codeLibelleRole")
-    private String codeLibelleRole;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idProfil")
-    private Collection<Restaurant> restaurantCollection;
+    @NotNull
+    @Column(name = "idprofil")
+    private Short idprofil;
+    @Size(max = 45)
+    @Column(name = "profil")
+    private String profil;
+    @Size(max = 45)
+    @Column(name = "codelibellerole")
+    private String codelibellerole;
 
     public Profil() {
     }
 
-    public Profil(Integer idProfil) {
-        this.idProfil = idProfil;
+    public Profil(Short idprofil) {
+        this.idprofil = idprofil;
     }
 
-    public Integer getIdProfil() {
-        return idProfil;
+    public Short getIdprofil() {
+        return idprofil;
     }
 
-    public void setIdProfil(Integer idProfil) {
-        this.idProfil = idProfil;
+    public void setIdprofil(Short idprofil) {
+        this.idprofil = idprofil;
     }
 
-    public String getCodeLibelleRole() {
-        return codeLibelleRole;
+    public String getProfil() {
+        return profil;
     }
 
-    public void setCodeLibelleRole(String codeLibelleRole) {
-        this.codeLibelleRole = codeLibelleRole;
+    public void setProfil(String profil) {
+        this.profil = profil;
     }
 
-    @XmlTransient
-    public Collection<Restaurant> getRestaurantCollection() {
-        return restaurantCollection;
+    public String getCodelibellerole() {
+        return codelibellerole;
     }
 
-    public void setRestaurantCollection(Collection<Restaurant> restaurantCollection) {
-        this.restaurantCollection = restaurantCollection;
+    public void setCodelibellerole(String codelibellerole) {
+        this.codelibellerole = codelibellerole;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idProfil != null ? idProfil.hashCode() : 0);
+        hash += (idprofil != null ? idprofil.hashCode() : 0);
         return hash;
     }
 
@@ -93,7 +89,7 @@ public class Profil implements Serializable {
             return false;
         }
         Profil other = (Profil) object;
-        if ((this.idProfil == null && other.idProfil != null) || (this.idProfil != null && !this.idProfil.equals(other.idProfil))) {
+        if ((this.idprofil == null && other.idprofil != null) || (this.idprofil != null && !this.idprofil.equals(other.idprofil))) {
             return false;
         }
         return true;
@@ -101,7 +97,7 @@ public class Profil implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Profil[ idProfil=" + idProfil + " ]";
+        return "entity.Profil[ idprofil=" + idprofil + " ]";
     }
     
 }

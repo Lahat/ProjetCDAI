@@ -9,76 +9,77 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Lahat
+ * @author izilife
  */
 @Entity
-@Table(name = "Restaurant")
+@Table(name = "restaurant")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Restaurant.findAll", query = "SELECT r FROM Restaurant r")
-    , @NamedQuery(name = "Restaurant.findByIdRestaurant", query = "SELECT r FROM Restaurant r WHERE r.idRestaurant = :idRestaurant")
-    , @NamedQuery(name = "Restaurant.findByNom", query = "SELECT r FROM Restaurant r WHERE r.nom = :nom")
-    , @NamedQuery(name = "Restaurant.findByTelephone", query = "SELECT r FROM Restaurant r WHERE r.telephone = :telephone")
-    , @NamedQuery(name = "Restaurant.findByEmail", query = "SELECT r FROM Restaurant r WHERE r.email = :email")
-    , @NamedQuery(name = "Restaurant.findByCategorie", query = "SELECT r FROM Restaurant r WHERE r.categorie = :categorie")
-    , @NamedQuery(name = "Restaurant.findByVille", query = "SELECT r FROM Restaurant r WHERE r.ville = :ville")})
+    @NamedQuery(name = "Restaurant.findAll", query = "SELECT r FROM Restaurant r"),
+    @NamedQuery(name = "Restaurant.findByIdrestaurant", query = "SELECT r FROM Restaurant r WHERE r.idrestaurant = :idrestaurant"),
+    @NamedQuery(name = "Restaurant.findByNom", query = "SELECT r FROM Restaurant r WHERE r.nom = :nom"),
+    @NamedQuery(name = "Restaurant.findByAdresse", query = "SELECT r FROM Restaurant r WHERE r.adresse = :adresse"),
+    @NamedQuery(name = "Restaurant.findByTelephone", query = "SELECT r FROM Restaurant r WHERE r.telephone = :telephone"),
+    @NamedQuery(name = "Restaurant.findByEmail", query = "SELECT r FROM Restaurant r WHERE r.email = :email"),
+    @NamedQuery(name = "Restaurant.findByCategorie", query = "SELECT r FROM Restaurant r WHERE r.categorie = :categorie"),
+    @NamedQuery(name = "Restaurant.findByVille", query = "SELECT r FROM Restaurant r WHERE r.ville = :ville"),
+    @NamedQuery(name = "Restaurant.findByIdmenu", query = "SELECT r FROM Restaurant r WHERE r.idmenu = :idmenu"),
+    @NamedQuery(name = "Restaurant.findByIdprofil", query = "SELECT r FROM Restaurant r WHERE r.idprofil = :idprofil")})
 public class Restaurant implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idRestaurant")
-    private Integer idRestaurant;
-    @Size(max = 2147483647)
+    @NotNull
+    @Column(name = "idrestaurant")
+    private Short idrestaurant;
+    @Size(max = 45)
     @Column(name = "nom")
     private String nom;
-    @Size(max = 2147483647)
+    @Size(max = 45)
+    @Column(name = "adresse")
+    private String adresse;
+    @Size(max = 45)
     @Column(name = "telephone")
     private String telephone;
     // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
-    @Size(max = 2147483647)
+    @Size(max = 45)
     @Column(name = "email")
     private String email;
-    @Size(max = 2147483647)
+    @Size(max = 45)
     @Column(name = "categorie")
     private String categorie;
-    @Size(max = 2147483647)
+    @Size(max = 45)
     @Column(name = "ville")
     private String ville;
-    @JoinColumn(name = "idMenu", referencedColumnName = "idMenu")
-    @ManyToOne(optional = false)
-    private Menu idMenu;
-    @JoinColumn(name = "idProfil", referencedColumnName = "idProfil")
-    @ManyToOne(optional = false)
-    private Profil idProfil;
+    @Column(name = "idmenu")
+    private Short idmenu;
+    @Column(name = "idprofil")
+    private Short idprofil;
 
     public Restaurant() {
     }
 
-    public Restaurant(Integer idRestaurant) {
-        this.idRestaurant = idRestaurant;
+    public Restaurant(Short idrestaurant) {
+        this.idrestaurant = idrestaurant;
     }
 
-    public Integer getIdRestaurant() {
-        return idRestaurant;
+    public Short getIdrestaurant() {
+        return idrestaurant;
     }
 
-    public void setIdRestaurant(Integer idRestaurant) {
-        this.idRestaurant = idRestaurant;
+    public void setIdrestaurant(Short idrestaurant) {
+        this.idrestaurant = idrestaurant;
     }
 
     public String getNom() {
@@ -87,6 +88,14 @@ public class Restaurant implements Serializable {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
     }
 
     public String getTelephone() {
@@ -121,26 +130,26 @@ public class Restaurant implements Serializable {
         this.ville = ville;
     }
 
-    public Menu getIdMenu() {
-        return idMenu;
+    public Short getIdmenu() {
+        return idmenu;
     }
 
-    public void setIdMenu(Menu idMenu) {
-        this.idMenu = idMenu;
+    public void setIdmenu(Short idmenu) {
+        this.idmenu = idmenu;
     }
 
-    public Profil getIdProfil() {
-        return idProfil;
+    public Short getIdprofil() {
+        return idprofil;
     }
 
-    public void setIdProfil(Profil idProfil) {
-        this.idProfil = idProfil;
+    public void setIdprofil(Short idprofil) {
+        this.idprofil = idprofil;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idRestaurant != null ? idRestaurant.hashCode() : 0);
+        hash += (idrestaurant != null ? idrestaurant.hashCode() : 0);
         return hash;
     }
 
@@ -151,7 +160,7 @@ public class Restaurant implements Serializable {
             return false;
         }
         Restaurant other = (Restaurant) object;
-        if ((this.idRestaurant == null && other.idRestaurant != null) || (this.idRestaurant != null && !this.idRestaurant.equals(other.idRestaurant))) {
+        if ((this.idrestaurant == null && other.idrestaurant != null) || (this.idrestaurant != null && !this.idrestaurant.equals(other.idrestaurant))) {
             return false;
         }
         return true;
@@ -159,7 +168,7 @@ public class Restaurant implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Restaurant[ idRestaurant=" + idRestaurant + " ]";
+        return "entity.Restaurant[ idrestaurant=" + idrestaurant + " ]";
     }
     
 }

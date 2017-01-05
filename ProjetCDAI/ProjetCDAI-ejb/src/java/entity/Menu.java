@@ -6,104 +6,78 @@
 package entity;
 
 import java.io.Serializable;
-import java.math.BigInteger;
-import java.util.Collection;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Lahat
+ * @author izilife
  */
 @Entity
-@Table(name = "Menu")
+@Table(name = "menu")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Menu.findAll", query = "SELECT m FROM Menu m")
-    , @NamedQuery(name = "Menu.findByIdMenu", query = "SELECT m FROM Menu m WHERE m.idMenu = :idMenu")
-    , @NamedQuery(name = "Menu.findByPrix", query = "SELECT m FROM Menu m WHERE m.prix = :prix")
-    , @NamedQuery(name = "Menu.findByLibelle", query = "SELECT m FROM Menu m WHERE m.libelle = :libelle")})
+    @NamedQuery(name = "Menu.findAll", query = "SELECT m FROM Menu m"),
+    @NamedQuery(name = "Menu.findByIdmenu", query = "SELECT m FROM Menu m WHERE m.idmenu = :idmenu"),
+    @NamedQuery(name = "Menu.findByPrix", query = "SELECT m FROM Menu m WHERE m.prix = :prix"),
+    @NamedQuery(name = "Menu.findByLibelle", query = "SELECT m FROM Menu m WHERE m.libelle = :libelle")})
 public class Menu implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idMenu")
-    private Integer idMenu;
+    @NotNull
+    @Column(name = "idmenu")
+    private Short idmenu;
     @Column(name = "prix")
-    private BigInteger prix;
+    private Short prix;
+    @Size(max = 45)
     @Column(name = "libelle")
-    private Character libelle;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idMenu")
-    private Collection<Restaurant> restaurantCollection;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idMenu")
-    private Collection<Annonce> annonceCollection;
+    private String libelle;
 
     public Menu() {
     }
 
-    public Menu(Integer idMenu) {
-        this.idMenu = idMenu;
+    public Menu(Short idmenu) {
+        this.idmenu = idmenu;
     }
 
-    public Integer getIdMenu() {
-        return idMenu;
+    public Short getIdmenu() {
+        return idmenu;
     }
 
-    public void setIdMenu(Integer idMenu) {
-        this.idMenu = idMenu;
+    public void setIdmenu(Short idmenu) {
+        this.idmenu = idmenu;
     }
 
-    public BigInteger getPrix() {
+    public Short getPrix() {
         return prix;
     }
 
-    public void setPrix(BigInteger prix) {
+    public void setPrix(Short prix) {
         this.prix = prix;
     }
 
-    public Character getLibelle() {
+    public String getLibelle() {
         return libelle;
     }
 
-    public void setLibelle(Character libelle) {
+    public void setLibelle(String libelle) {
         this.libelle = libelle;
-    }
-
-    @XmlTransient
-    public Collection<Restaurant> getRestaurantCollection() {
-        return restaurantCollection;
-    }
-
-    public void setRestaurantCollection(Collection<Restaurant> restaurantCollection) {
-        this.restaurantCollection = restaurantCollection;
-    }
-
-    @XmlTransient
-    public Collection<Annonce> getAnnonceCollection() {
-        return annonceCollection;
-    }
-
-    public void setAnnonceCollection(Collection<Annonce> annonceCollection) {
-        this.annonceCollection = annonceCollection;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idMenu != null ? idMenu.hashCode() : 0);
+        hash += (idmenu != null ? idmenu.hashCode() : 0);
         return hash;
     }
 
@@ -114,7 +88,7 @@ public class Menu implements Serializable {
             return false;
         }
         Menu other = (Menu) object;
-        if ((this.idMenu == null && other.idMenu != null) || (this.idMenu != null && !this.idMenu.equals(other.idMenu))) {
+        if ((this.idmenu == null && other.idmenu != null) || (this.idmenu != null && !this.idmenu.equals(other.idmenu))) {
             return false;
         }
         return true;
@@ -122,7 +96,7 @@ public class Menu implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Menu[ idMenu=" + idMenu + " ]";
+        return "entity.Menu[ idmenu=" + idmenu + " ]";
     }
     
 }
