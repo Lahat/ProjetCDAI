@@ -75,7 +75,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title">
-						<h4>Vous êtes connecté en tant que restaurateur</h4>
+						<h4>Vous êtes connecté en tant que client</h4>
 					</div>
 				</div>
 			</div>
@@ -111,23 +111,11 @@
                                 </div>
                             <div class="col-md-3">
                                 <div class="sidebar-widget">
-                                    <div class="blog-search">
-                                        <form>
-                                            <input type="text" name="search">
-                                            <span>
-                                                <button id="submit_btn" class="search-submit" type="submit">
-                                                    <i class="fa fa-search"></i>
-                                                </button>
-                                            </span>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget">
                                     <h4 class="sidebar-title">OPTIONS</h4>
                                     <ul>
-                                        <li><a href="">Publier une annonce</a></li>
-                                        <li><a href="">Retirer une annonce</a></li>
-                                        <li><a href="">Valider une reservation</a></li>
+                                        <li><a href="">Choisir Annonce</a></li>
+                                        <li><a href="">Liste de vos reservation</a></li>
+                                        <li><a href="">Valider vos annonce</a></li>
                                     </ul>
                                 </div>
                             </div>
