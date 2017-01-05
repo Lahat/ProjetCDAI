@@ -6,151 +6,128 @@
 package entity;
 
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.Date;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Lahat
  */
 @Entity
-@Table(name = "Reservation")
+@Table(name = "reservation")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Reservation.findAll", query = "SELECT r FROM Reservation r")
-    , @NamedQuery(name = "Reservation.findByIdReservation", query = "SELECT r FROM Reservation r WHERE r.idReservation = :idReservation")
+    , @NamedQuery(name = "Reservation.findByIdreservation", query = "SELECT r FROM Reservation r WHERE r.idreservation = :idreservation")
     , @NamedQuery(name = "Reservation.findByDate", query = "SELECT r FROM Reservation r WHERE r.date = :date")
-    , @NamedQuery(name = "Reservation.findByHeureFin", query = "SELECT r FROM Reservation r WHERE r.heureFin = :heureFin")
-    , @NamedQuery(name = "Reservation.findByHeureDebut", query = "SELECT r FROM Reservation r WHERE r.heureDebut = :heureDebut")
-    , @NamedQuery(name = "Reservation.findByNbrePersonne", query = "SELECT r FROM Reservation r WHERE r.nbrePersonne = :nbrePersonne")
-    , @NamedQuery(name = "Reservation.findByIdClient", query = "SELECT r FROM Reservation r WHERE r.idClient = :idClient")})
+    , @NamedQuery(name = "Reservation.findByHeuredebut", query = "SELECT r FROM Reservation r WHERE r.heuredebut = :heuredebut")
+    , @NamedQuery(name = "Reservation.findByHeurefin", query = "SELECT r FROM Reservation r WHERE r.heurefin = :heurefin")
+    , @NamedQuery(name = "Reservation.findByNbrepersonnes", query = "SELECT r FROM Reservation r WHERE r.nbrepersonnes = :nbrepersonnes")
+    , @NamedQuery(name = "Reservation.findByIdrestaurant", query = "SELECT r FROM Reservation r WHERE r.idrestaurant = :idrestaurant")
+    , @NamedQuery(name = "Reservation.findByIdclient", query = "SELECT r FROM Reservation r WHERE r.idclient = :idclient")})
 public class Reservation implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idReservation")
-    private Integer idReservation;
+    @NotNull
+    @Column(name = "idreservation")
+    private Short idreservation;
+    @Size(max = 45)
     @Column(name = "date")
-    @Temporal(TemporalType.DATE)
-    private Date date;
-    @Size(max = 2147483647)
-    @Column(name = "heureFin")
-    private String heureFin;
-    @Size(max = 2147483647)
-    @Column(name = "heureDebut")
-    private String heureDebut;
-    @Column(name = "nbrePersonne")
-    private Integer nbrePersonne;
-    @Basic(optional = false)
-    @Column(name = "idClient")
-    private int idClient;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idRestaurant")
-    private Collection<Reservation> reservationCollection;
-    @JoinColumn(name = "idRestaurant", referencedColumnName = "idReservation")
-    @ManyToOne(optional = false)
-    private Reservation idRestaurant;
+    private String date;
+    @Size(max = 45)
+    @Column(name = "heuredebut")
+    private String heuredebut;
+    @Size(max = 45)
+    @Column(name = "heurefin")
+    private String heurefin;
+    @Column(name = "nbrepersonnes")
+    private Short nbrepersonnes;
+    @Column(name = "idrestaurant")
+    private Short idrestaurant;
+    @Column(name = "idclient")
+    @Temporal(TemporalType.TIME)
+    private Date idclient;
 
     public Reservation() {
     }
 
-    public Reservation(Integer idReservation) {
-        this.idReservation = idReservation;
+    public Reservation(Short idreservation) {
+        this.idreservation = idreservation;
     }
 
-    public Reservation(Integer idReservation, int idClient) {
-        this.idReservation = idReservation;
-        this.idClient = idClient;
+    public Short getIdreservation() {
+        return idreservation;
     }
 
-    public Integer getIdReservation() {
-        return idReservation;
+    public void setIdreservation(Short idreservation) {
+        this.idreservation = idreservation;
     }
 
-    public void setIdReservation(Integer idReservation) {
-        this.idReservation = idReservation;
-    }
-
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public String getHeureFin() {
-        return heureFin;
+    public String getHeuredebut() {
+        return heuredebut;
     }
 
-    public void setHeureFin(String heureFin) {
-        this.heureFin = heureFin;
+    public void setHeuredebut(String heuredebut) {
+        this.heuredebut = heuredebut;
     }
 
-    public String getHeureDebut() {
-        return heureDebut;
+    public String getHeurefin() {
+        return heurefin;
     }
 
-    public void setHeureDebut(String heureDebut) {
-        this.heureDebut = heureDebut;
+    public void setHeurefin(String heurefin) {
+        this.heurefin = heurefin;
     }
 
-    public Integer getNbrePersonne() {
-        return nbrePersonne;
+    public Short getNbrepersonnes() {
+        return nbrepersonnes;
     }
 
-    public void setNbrePersonne(Integer nbrePersonne) {
-        this.nbrePersonne = nbrePersonne;
+    public void setNbrepersonnes(Short nbrepersonnes) {
+        this.nbrepersonnes = nbrepersonnes;
     }
 
-    public int getIdClient() {
-        return idClient;
+    public Short getIdrestaurant() {
+        return idrestaurant;
     }
 
-    public void setIdClient(int idClient) {
-        this.idClient = idClient;
+    public void setIdrestaurant(Short idrestaurant) {
+        this.idrestaurant = idrestaurant;
     }
 
-    @XmlTransient
-    public Collection<Reservation> getReservationCollection() {
-        return reservationCollection;
+    public Date getIdclient() {
+        return idclient;
     }
 
-    public void setReservationCollection(Collection<Reservation> reservationCollection) {
-        this.reservationCollection = reservationCollection;
-    }
-
-    public Reservation getIdRestaurant() {
-        return idRestaurant;
-    }
-
-    public void setIdRestaurant(Reservation idRestaurant) {
-        this.idRestaurant = idRestaurant;
+    public void setIdclient(Date idclient) {
+        this.idclient = idclient;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idReservation != null ? idReservation.hashCode() : 0);
+        hash += (idreservation != null ? idreservation.hashCode() : 0);
         return hash;
     }
 
@@ -161,7 +138,7 @@ public class Reservation implements Serializable {
             return false;
         }
         Reservation other = (Reservation) object;
-        if ((this.idReservation == null && other.idReservation != null) || (this.idReservation != null && !this.idReservation.equals(other.idReservation))) {
+        if ((this.idreservation == null && other.idreservation != null) || (this.idreservation != null && !this.idreservation.equals(other.idreservation))) {
             return false;
         }
         return true;
@@ -169,7 +146,7 @@ public class Reservation implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Reservation[ idReservation=" + idReservation + " ]";
+        return "entity.Reservation[ idreservation=" + idreservation + " ]";
     }
     
 }

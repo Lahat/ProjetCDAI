@@ -10,16 +10,16 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet>
-        <servlet-name>UtilisateurServlet</servlet-name>
-        <servlet-class>Cdai.Servlet.UtilisateurServlet</servlet-class>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>com.projetCDAI.servlets.Test</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>UtilisateurServlet</servlet-name>
-        <url-pattern>/UtilisateurServlet</url-pattern>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/Test</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
