@@ -101,7 +101,7 @@
                                                                          <a class="hiddenanchor" id="tologin"></a>
                                                                          <div id="wrapper">
                                                                              <div id="register" class="animate form">
-                                                                                 <form  action="dashboard_Restaurateur.jsp" autocomplete="on"> 
+                                                                                 <form  action="dashboard_Restaurateur.jsp" autocomplete="on" method="POST"> 
                                                                                      <h1> S'inscrire </h1>
                                                                                      <fieldset>
                                                                                          <legend>Vos Coordonnées : </legend>
