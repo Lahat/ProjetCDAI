@@ -123,10 +123,11 @@
                                     </div>
                                 </div>
                                 <div class="sidebar-widget">
-                                    <h4 class="sidebar-title">NOS PRODUITS</h4>
+                                    <h4 class="sidebar-title">OPTIONS</h4>
                                     <ul>
-                                        <li><a href="">AJOUTER DES ANNONCES</a></li>
-                                        <li><a href="">VALIDER UNE RESERVATION</a></li>
+                                        <li><a href="annonce.jsp">Publier une annonce</a></li>
+                                        <li><a href="">Retirer une annonce</a></li>
+                                        <li><a href="">Valider une reservation</a></li>
                                     </ul>
                                 </div>
                             </div>

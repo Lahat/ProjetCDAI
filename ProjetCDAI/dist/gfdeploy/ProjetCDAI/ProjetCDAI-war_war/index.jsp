@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<title>Restaurant - Reservation de table en ligne</title>
+	<title>Restaurant - LaCuillere.Com</title>
 	
 	<!-- Main CSS file -->
         <link rel="stylesheet" href="template/css/bootstrap.min.css" />

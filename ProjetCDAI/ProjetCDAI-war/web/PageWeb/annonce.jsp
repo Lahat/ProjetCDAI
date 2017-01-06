@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 <head>
 	<meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -66,23 +68,6 @@
 			</div><!-- /.container -->
 		</nav>
 	</header>
-	<!-- /HEADER -->
-
-	
-	<!-- PAGE HEADER -->
-	<section id="page-header">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-title">
-						<h4>Vous êtes connecté en tant que restaurateur</h4>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- /PAGE HEADER -->
-
 
 	<!-- BLOG -->
 	<section id="blog">
@@ -91,14 +76,43 @@
 				<div class="col-md-9">
 					<hr>
 					<div class="single-blog">
-						<article>
-							<div class="post-slider">
-                                                            <div class="row jumbotron">
-                                                             
+                                                      <div class="row jumbotron">
+                                                           
+                                                          <fieldset>A mettre ici</fieldset>
+                                                          <f:view>
+
+
+                                                              <h:form>
+                                                                  <h1><h:outputText value="Create/Edit"/></h1>
+                                                                  <p:panelGrid columns="2">
+                                                                      <p:outputLabel value="Idannonce:" for="idannonce" />
+                                                                      <p:inputText id="idannonce" value="" title="Idannonce" required="true" requiredMessage="The Idannonce field is required."/>
+                                                                      <p:outputLabel value="Restaurateur:" for="restaurateur" />
+                                                                      <p:inputText id="restaurateur" value="" title="Restaurateur" />
+                                                                      <p:outputLabel value="Restaurant:" for="restaurant" />
+                                                                      <p:inputText id="restaurant" value="" title="Restaurant" />
+                                                                      <p:outputLabel value="Idmenu:" for="idmenu" />
+                                                                      <p:inputText id="idmenu" value="" title="Idmenu" />
+                                                                      <p:outputLabel value="Plagedispo:" for="plagedispo" />
+                                                                      <p:inputText id="plagedispo" value="" title="Plagedispo" />
+                                                                      <p:outputLabel value="Nbreplacedispo:" for="nbreplacedispo" />
+                                                                      <p:inputText id="nbreplacedispo" value="" title="Nbreplacedispo" />
+                                                                      <p:outputLabel value="Datededispo:" for="datededispo" />
+                                                                      <p:inputText id="datededispo" value="" title="Datededispo" />
+                                                                      <p:outputLabel value="Reduction:" for="reduction" />
+                                                                      <p:inputText id="reduction" value="" title="Reduction" />
+                                                                      <p:outputLabel value="Pourcreduction:" for="pourcreduction" />
+                                                                      <p:inputText id="pourcreduction" value="" title="Pourcreduction" />
+                                                                      <p:outputLabel value="Idtelephone:" for="idtelephone" />
+                                                                      <p:inputText id="idtelephone" value="" title="Idtelephone" />
+                                                                      <p:outputLabel value="Idemail:" for="idemail" />
+                                                                      <p:inputText id="idemail" value="" title="Idemail" />
+                                                                  </p:panelGrid>
+                                                              </h:form>
+                                                          </f:view>
+
                                                                
-                                                            </div>
                                                         </div>
-                                                </article>
                                         </div>
                                         <hr>
                                         <ul class="pagination">
@@ -109,28 +123,7 @@
                                             <li><a href="#">4</a></li>
                                             <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                                 </div>
-                            <div class="col-md-3">
-                                <div class="sidebar-widget">
-                                    <div class="blog-search">
-                                        <form>
-                                            <input type="text" name="search">
-                                            <span>
-                                                <button id="submit_btn" class="search-submit" type="submit">
-                                                    <i class="fa fa-search"></i>
-                                                </button>
-                                            </span>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget">
-                                    <h4 class="sidebar-title">OPTIONS</h4>
-                                    <ul>
-                                        <li><a href="annonce.jsp">Publier une annonce</a></li>
-                                        <li><a href="">Retirer une annonce</a></li>
-                                        <li><a href="">Valider une reservation</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                         
                         </div>
 		</div>
 	</section>
