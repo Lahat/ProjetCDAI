@@ -16,8 +16,7 @@
                     <file>${libs.primefaces.classpath}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
-<<<<<<< HEAD
-=======
+
                 <library dirs="200">
                     <file>${libs.Richefaces.classpath}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
@@ -30,7 +29,6 @@
                     <file>${file.reference.richfaces-api-3.3.3.Final.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
->>>>>>> b968a1ecfe9e818d1fb13ac3829488c530165362
             </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>
