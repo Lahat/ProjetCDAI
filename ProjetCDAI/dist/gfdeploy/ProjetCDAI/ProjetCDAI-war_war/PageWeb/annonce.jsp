@@ -3,159 +3,96 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <head>
-	<meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-	<title>Restaurant - Reservation de table en ligne</title>
-	
-	<!-- Main CSS file -->
-        <link rel="stylesheet" href="../template/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../template/css/owl.carousel.css" />
-        <link rel="stylesheet" href="../template/css/magnific-popup.css" />
-        <link rel="stylesheet" href="../template/css/font-awesome.css" />
-        <link rel="stylesheet" href="../template/css/style.css" />
-        <link rel="stylesheet" href="../template/css/responsive.css" />
-
-	
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Restaurant - LaCuillere.com</title>
+    
+    <link rel="stylesheet" href="../template/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../template/css/owl.carousel.css" />
+    <link rel="stylesheet" href="../template/css/magnific-popup.css" />
+    <link rel="stylesheet" href="../template/css/font-awesome.css" />
+    <link rel="stylesheet" href="../template/css/style.css" />
+    <link rel="stylesheet" href="../template/css/responsive.css" />
+    
 	<!-- Favicon -->
-        <link rel="shortcut icon" href="../template/images/icon/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../template/images/icon/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../template/images/icon/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../template/images/icon/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="../template/images/icon/apple-touch-icon-57-precomposed.png">
-	
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
-	
+    <link rel="shortcut icon" href="../template/images/icon/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../template/images/icon/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../template/images/icon/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../template/images/icon/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../template/images/icon/apple-touch-icon-57-precomposed.png">
 </head>
 <body>
-
-	<!-- PRELOADER -->
-	<div id="st-preloader">
-		<div id="pre-status">
-			<div class="preload-placeholder"></div>
-		</div>
-	</div>
-	<!-- /PRELOADER -->
-
-	
-	<!-- HEADER -->
-	<header id="header">
-		<nav class="navbar st-navbar navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#st-navbar-collapse">
-						<span class="sr-only">Menu</span>
-				    	<span class="icon-bar"></span>
-				    	<span class="icon-bar"></span>
-				    	<span class="icon-bar"></span>
-					</button>
-                                    <a class="logo" href="index.html"><img src="../template/images/lat.JPG" alt="" width="50" height="50"></a>
-				</div>
-
-				<div class="collapse navbar-collapse" id="st-navbar-collapse">
-					<ul class="nav navbar-nav navbar-right">
-				    	<li><a href="">ANNONCES</a></li>
-				    	<li><a href="">LES MENUS</a></li>
-				    	<li><a href="">CONTACT</a></li>
-                                        <li><a href="">SE DECONNECTER</a></li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container -->
-		</nav>
-	</header>
-
-	<!-- BLOG -->
-	<section id="blog">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-9">
-					<hr>
-					<div class="single-blog">
-                                                      <div class="row jumbotron">
-                                                           
-                                                          <fieldset>A mettre ici</fieldset>
-                                                          <f:view>
-
-
-                                                              <h:form>
-                                                                  <h1><h:outputText value="Create/Edit"/></h1>
-                                                                  <p:panelGrid columns="2">
-                                                                      <p:outputLabel value="Idannonce:" for="idannonce" />
-                                                                      <p:inputText id="idannonce" value="" title="Idannonce" required="true" requiredMessage="The Idannonce field is required."/>
-                                                                      <p:outputLabel value="Restaurateur:" for="restaurateur" />
-                                                                      <p:inputText id="restaurateur" value="" title="Restaurateur" />
-                                                                      <p:outputLabel value="Restaurant:" for="restaurant" />
-                                                                      <p:inputText id="restaurant" value="" title="Restaurant" />
-                                                                      <p:outputLabel value="Idmenu:" for="idmenu" />
-                                                                      <p:inputText id="idmenu" value="" title="Idmenu" />
-                                                                      <p:outputLabel value="Plagedispo:" for="plagedispo" />
-                                                                      <p:inputText id="plagedispo" value="" title="Plagedispo" />
-                                                                      <p:outputLabel value="Nbreplacedispo:" for="nbreplacedispo" />
-                                                                      <p:inputText id="nbreplacedispo" value="" title="Nbreplacedispo" />
-                                                                      <p:outputLabel value="Datededispo:" for="datededispo" />
-                                                                      <p:inputText id="datededispo" value="" title="Datededispo" />
-                                                                      <p:outputLabel value="Reduction:" for="reduction" />
-                                                                      <p:inputText id="reduction" value="" title="Reduction" />
-                                                                      <p:outputLabel value="Pourcreduction:" for="pourcreduction" />
-                                                                      <p:inputText id="pourcreduction" value="" title="Pourcreduction" />
-                                                                      <p:outputLabel value="Idtelephone:" for="idtelephone" />
-                                                                      <p:inputText id="idtelephone" value="" title="Idtelephone" />
-                                                                      <p:outputLabel value="Idemail:" for="idemail" />
-                                                                      <p:inputText id="idemail" value="" title="Idemail" />
-                                                                  </p:panelGrid>
-                                                              </h:form>
-                                                          </f:view>
-
-                                                               
-                                                        </div>
-                                        </div>
-                                        <hr>
-                                        <ul class="pagination">
-                                            <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                            <li class="active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                </div>
-                         
+    <div id="st-preloader">
+        <div id="pre-status">
+            <div class="preload-placeholder"></div>
+        </div>        
+    </div>
+    <header id="header">
+        <nav class="navbar st-navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#st-navbar-collapse">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="logo" href="index.html"><img src="../template/images/blog/lat.JPG" alt="" width="50" height="50"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="st-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="">ANNONCES</a></li>
+                        <li><a href="">LES MENUS</a></li>
+                        <li><a href="">CONTACT</a></li>
+                        <li><a href="">SE DECONNECTER</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> 
+    <section id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <hr>
+                    <div class="single-blog">
+                        <div class="row jumbotron">
+                            <fieldset>A mettre ici</fieldset>
                         </div>
-		</div>
-	</section>
-	<!-- /BLOG -->
-
-	<!-- FOOTER -->
-	<footer id="footer">
-		<div class="container">
-			<div class="row">
-				<!-- SOCIAL ICONS -->
-				<div class="col-sm-6 col-sm-push-6 footer-social-icons">
-					<span>Follow us:</span>
-					<a href=""><i class="fa fa-facebook"></i></a>
-					<a href=""><i class="fa fa-twitter"></i></a>
-					<a href=""><i class="fa fa-google-plus"></i></a>
-					<a href=""><i class="fa fa-pinterest-p"></i></a>
-				</div>
-				<!-- /SOCIAL ICONS -->
-				<div class="col-sm-6 col-sm-pull-6 copyright">
-					<p>&copy; 2017 <a href="">Etudiant en master 2, universit&eacute; de Paris Dauphine</a>. All Rights Reserved with NDIAYE, NIANG, DIENG.</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- /FOOTER -->
-
-	<!-- Scroll-up -->
+                    </div>
+                    <hr>
+                    <ul class="pagination">
+                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                </div> 
+            </div>
+        </div>
+    </section>
+  	<footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-push-6 footer-social-icons">
+                        <span>Follow us:</span>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-google-plus"></i></a>
+                        <a href=""><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                    <div class="col-sm-6 col-sm-pull-6 copyright"
+                         <p>&copy; 2017 <a href="ent.dauphine.fr">Etudiant en master 2, universit&eacute; de Paris Dauphine</a>. All Rights Reserved with NDIAYE, NIANG, DIENG.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
 	<div class="scroll-up">
-		<ul><li><a href="#header"><i class="fa fa-angle-up"></i></a></li></ul>
+            <ul><li><a href="#header"><i class="fa fa-angle-up"></i></a></li></ul>
 	</div>
-	
-	<!-- JS -->
+    
         <script type="text/javascript" src="../template/js/jquery.min.js"></script><!-- jQuery -->
         <script type="text/javascript" src="../template/js/bootstrap.min.js"></script><!-- Bootstrap -->
         <script type="text/javascript" src="../template/js/jquery.parallax.js"></script><!-- Parallax -->
@@ -168,7 +105,5 @@
         <script type="text/javascript" src="../template/js/jquery.isotope.min.js"></script><!-- isotope -->
         <script type="text/javascript" src="../template/js/jquery.magnific-popup.min.js"></script><!-- magnific-popup -->
         <script type="text/javascript" src="../template/js/scripts.js"></script><!-- Scripts -->
-
-
 </body>
 </html>
