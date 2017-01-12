@@ -13,9 +13,28 @@
                     <file>${libs.PostgreSQLDriver.classpath}</file>
                 </library>
                 <library dirs="200">
+<<<<<<< HEAD
                     <file>${libs.Richefaces.classpath}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
+=======
+                    <file>${libs.primefaces.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+
+                <library dirs="200">
+                    <file>${libs.Richefaces.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${libs.MyLibrary.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.richfaces-api-3.3.3.Final.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+>>>>>>> c4a2a1b93097bead553248b4e3d9a152f42faceb
             </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>
