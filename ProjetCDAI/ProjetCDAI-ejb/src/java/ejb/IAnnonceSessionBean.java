@@ -30,4 +30,6 @@ public interface IAnnonceSessionBean {
 
     int count();
     
+    public void creerAnnonce(String restaurateur, String restaurant, String plagedispo, String nbreplacedispo, String datededispo, String reduction, String pourcreduction);
+    
 }

@@ -17,6 +17,10 @@
         <servlet-name>User</servlet-name>
         <servlet-class>com.projetCDAI.servlets.User</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AnnonceServlet</servlet-name>
+        <servlet-class>com.projetCDAI.servlets.AnnonceServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -28,6 +32,10 @@
     <servlet-mapping>
         <servlet-name>User</servlet-name>
         <url-pattern>/User</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AnnonceServlet</servlet-name>
+        <url-pattern>/AnnonceServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
