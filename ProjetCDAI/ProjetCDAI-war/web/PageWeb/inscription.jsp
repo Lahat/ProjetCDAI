@@ -104,7 +104,7 @@
                                                                          <a class="hiddenanchor" id="tologin"></a>
                                                                          <div id="wrapper">
                                                                              <div id="register" class="animate form">
-                                                                                 <form  action="dashboard_Restaurateur.jsp" autocomplete="on" method="POST"> 
+                                                                                 <form  action="${pageContext.request.contextPath}/User" autocomplete="on" method="POST"> 
                                                                                      <h1> S'inscrire </h1>
                                                                                      <fieldset>
                                                                                          <legend>Vos Coordonnées : </legend>
@@ -122,9 +122,9 @@
                                                                                                  <td><input id="prenom" name="adresse" required="required" type="text" placeholder="Adresse" /></td>
                                                                                              </tr>
                                                                                              <tr><th>Login : </th>
-                                                                                                 <td><input id="passwordsignup" name="password" required="required" type="text" placeholder="Votre email"/> </td>
+                                                                                                 <td><input id="passwordsignup" name="login" required="required" type="text" placeholder="Votre email"/> </td>
                                                                                              </tr><br>
-                                                                                             <tr><th>Mot de Passe : </th>
+                                                                                             <tr><th>Mot de Passe :  </th>
                                                                                                  <td><input id="mdp" name="mdp" required="required" type="password" placeholder="Mot de passe" /></td>
                                                                                              </tr>
                                                                                          </table>
