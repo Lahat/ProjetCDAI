@@ -32,9 +32,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Restaurant.findByTelephone", query = "SELECT r FROM Restaurant r WHERE r.telephone = :telephone")
     , @NamedQuery(name = "Restaurant.findByEmail", query = "SELECT r FROM Restaurant r WHERE r.email = :email")
     , @NamedQuery(name = "Restaurant.findByCategorie", query = "SELECT r FROM Restaurant r WHERE r.categorie = :categorie")
-    , @NamedQuery(name = "Restaurant.findByVille", query = "SELECT r FROM Restaurant r WHERE r.ville = :ville")
-    , @NamedQuery(name = "Restaurant.findByIdmenu", query = "SELECT r FROM Restaurant r WHERE r.idmenu = :idmenu")
-    , @NamedQuery(name = "Restaurant.findByIdprofil", query = "SELECT r FROM Restaurant r WHERE r.idprofil = :idprofil")})
+    , @NamedQuery(name = "Restaurant.findByVille", query = "SELECT r FROM Restaurant r WHERE r.ville = :ville")})
 public class Restaurant implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -62,10 +60,6 @@ public class Restaurant implements Serializable {
     @Size(max = 45)
     @Column(name = "ville")
     private String ville;
-    @Column(name = "idmenu")
-    private Short idmenu;
-    @Column(name = "idprofil")
-    private Short idprofil;
 
     public Restaurant() {
     }
@@ -128,22 +122,6 @@ public class Restaurant implements Serializable {
 
     public void setVille(String ville) {
         this.ville = ville;
-    }
-
-    public Short getIdmenu() {
-        return idmenu;
-    }
-
-    public void setIdmenu(Short idmenu) {
-        this.idmenu = idmenu;
-    }
-
-    public Short getIdprofil() {
-        return idprofil;
-    }
-
-    public void setIdprofil(Short idprofil) {
-        this.idprofil = idprofil;
     }
 
     @Override

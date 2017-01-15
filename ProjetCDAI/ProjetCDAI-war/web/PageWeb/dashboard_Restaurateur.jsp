@@ -57,7 +57,7 @@
 
 				<div class="collapse navbar-collapse" id="st-navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
-				    	<li><a href="">ANNONCES</a></li>
+				    	<li><a href="annonce.jsp">ANNONCES</a></li>
 				    	<li><a href="">LES MENUS</a></li>
 				    	<li><a href="">CONTACT</a></li>
                                         <li><a href="">SE DECONNECTER</a></li>
