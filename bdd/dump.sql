@@ -20,11 +20,11 @@ CREATE DATABASE "laCuillere"
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
 	
--- Table: "laCuillere".annonce
+-- Table: "public".annonce
 
--- DROP TABLE "laCuillere".annonce;
+-- DROP TABLE "public".annonce;
 
-CREATE TABLE "laCuillere".annonce
+CREATE TABLE "public".annonce
 (
     idannonce smallint NOT NULL,
     restaurateur character varying(45) COLLATE pg_catalog."default",
@@ -44,14 +44,14 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "laCuillere".annonce
+ALTER TABLE "public".annonce
     OWNER to postgres;
 	
--- Table: "laCuillere".menu
+-- Table: "public".menu
 
--- DROP TABLE "laCuillere".menu;
+-- DROP TABLE "public".menu;
 
-CREATE TABLE "laCuillere".menu
+CREATE TABLE "public".menu
 (
     idmenu smallint NOT NULL,
     prix smallint,
@@ -63,14 +63,14 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "laCuillere".menu
+ALTER TABLE "public".menu
     OWNER to postgres;
 	
--- Table: "laCuillere".profil
+-- Table: "public".profil
 
--- DROP TABLE "laCuillere".profil;
+-- DROP TABLE "public".profil;
 
-CREATE TABLE "laCuillere".profil
+CREATE TABLE "public".profil
 (
     idprofil smallint NOT NULL,
     profil character varying(45) COLLATE pg_catalog."default",
@@ -82,14 +82,14 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "laCuillere".profil
+ALTER TABLE "public".profil
     OWNER to postgres;
 	
--- Table: "laCuillere".reservation
+-- Table: "public".reservation
 
--- DROP TABLE "laCuillere".reservation;
+-- DROP TABLE "public".reservation;
 
-CREATE TABLE "laCuillere".reservation
+CREATE TABLE "public".reservation
 (
     idreservation smallint NOT NULL,
     date character varying(45) COLLATE pg_catalog."default",
@@ -105,14 +105,14 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "laCuillere".reservation
+ALTER TABLE "public".reservation
     OWNER to postgres;
 	
--- Table: "laCuillere".restaurant
+-- Table: "public".restaurant
 
--- DROP TABLE "laCuillere".restaurant;
+-- DROP TABLE "public".restaurant;
 
-CREATE TABLE "laCuillere".restaurant
+CREATE TABLE "public".restaurant
 (
     idrestaurant smallint NOT NULL,
     nom character varying(45) COLLATE pg_catalog."default",
@@ -130,14 +130,14 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "laCuillere".restaurant
+ALTER TABLE "public".restaurant
     OWNER to postgres;
 	
--- Table: "laCuillere".role
+-- Table: "public".role
 
--- DROP TABLE "laCuillere".role;
+-- DROP TABLE "public".role;
 
-CREATE TABLE "laCuillere".role
+CREATE TABLE "public".role
 (
     idrole smallint NOT NULL,
     coderole character varying(45) COLLATE pg_catalog."default",
@@ -149,14 +149,14 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "laCuillere".role
+ALTER TABLE "public".role
     OWNER to postgres;
 	
--- Table: "laCuillere".utilisateur
+-- Table: "public".utilisateur
 
--- DROP TABLE "laCuillere".utilisateur;
+-- DROP TABLE "public".utilisateur;
 
-CREATE TABLE "laCuillere".utilisateur
+CREATE TABLE "public".utilisateur
 (
     idutilisateur smallint NOT NULL,
     nom character varying(45) COLLATE pg_catalog."default",
@@ -172,5 +172,5 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "laCuillere".utilisateur
+ALTER TABLE "public".utilisateur
     OWNER to postgres;
