@@ -14,10 +14,6 @@
         <servlet-class>com.projetCDAI.servlets.Test</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>User</servlet-name>
-        <servlet-class>com.projetCDAI.servlets.User</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>AnnonceServlet</servlet-name>
         <servlet-class>com.projetCDAI.servlets.AnnonceServlet</servlet-class>
     </servlet>
@@ -28,10 +24,6 @@
     <servlet-mapping>
         <servlet-name>Test</servlet-name>
         <url-pattern>/Test</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>User</servlet-name>
-        <url-pattern>/User</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AnnonceServlet</servlet-name>

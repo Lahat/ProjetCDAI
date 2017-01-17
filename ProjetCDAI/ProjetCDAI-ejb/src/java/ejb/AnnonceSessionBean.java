@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author Lahat
  */
 @Stateless
-public class AnnonceSessionBean extends AbstractFacade<Annonce> implements IAnnonceSessionBean {
+public class AnnonceSessionBean extends AbstractFacade<Annonce> implements IAnnonce {
 
     @PersistenceContext(unitName = "ProjetCDAI-ejbPU")
     private EntityManager em;
@@ -28,8 +28,7 @@ public class AnnonceSessionBean extends AbstractFacade<Annonce> implements IAnno
     public AnnonceSessionBean() {
         super(Annonce.class);
     }
-
-    @Override
+    
     public void creerAnnonce(String restaurateur, String restaurant, String plagedispo, String nbreplacedispo, String datededispo, String reduction, String pourcreduction) {
         Annonce an = new Annonce();
         an.setRestaurateur(restaurateur);

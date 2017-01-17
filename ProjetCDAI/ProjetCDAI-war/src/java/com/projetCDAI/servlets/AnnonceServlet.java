@@ -29,11 +29,11 @@ private AnnonceSessionBean annoncebean;
         
         String restaurateur = request.getParameter("restaurateur");
         String restaurant = request.getParameter("restaurant");
-         String plagedispo = request.getParameter("plagedispo");
+        String plagedispo = request.getParameter("plagedispo");
         String nbreplacedispo = request.getParameter("nbreplacedispo");
-         String datededispo = request.getParameter("datededispo");
+        String datededispo = request.getParameter("datededispo");
         String reduction = request.getParameter("reduction");
-         String pourcreduction = request.getParameter("pourcreduction");
+        String pourcreduction = request.getParameter("pourcreduction");
         
       
         annoncebean.creerAnnonce(restaurateur, restaurant, plagedispo, nbreplacedispo, datededispo, reduction, pourcreduction);

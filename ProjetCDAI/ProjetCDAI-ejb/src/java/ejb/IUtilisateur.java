@@ -5,7 +5,7 @@
  */
 package ejb;
 
-import entity.Menu;
+import entity.Utilisateur;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -14,19 +14,19 @@ import javax.ejb.Local;
  * @author Lahat
  */
 @Local
-public interface IMenuSessionBean {
+public interface IUtilisateur {
 
-    void create(Menu menu);
+    void create(Utilisateur utilisateur);
 
-    void edit(Menu menu);
+    void edit(Utilisateur utilisateur);
 
-    void remove(Menu menu);
+    void remove(Utilisateur utilisateur);
 
-    Menu find(Object id);
+    Utilisateur find(Object id);
 
-    List<Menu> findAll();
+    List<Utilisateur> findAll();
 
-    List<Menu> findRange(int[] range);
+    List<Utilisateur> findRange(int[] range);
 
     int count();
     

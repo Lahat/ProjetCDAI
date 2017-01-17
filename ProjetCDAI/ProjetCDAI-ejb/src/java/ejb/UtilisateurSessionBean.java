@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author Lahat
  */
 @Stateless
-public class UtilisateurSessionBean extends AbstractFacade<Utilisateur> implements IUtilisateurSessionBean {
+public class UtilisateurSessionBean extends AbstractFacade<Utilisateur> implements IUtilisateur {
 
     @PersistenceContext(unitName = "ProjetCDAI-ejbPU")
     private EntityManager em;

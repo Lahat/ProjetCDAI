@@ -5,7 +5,7 @@
  */
 package ejb;
 
-import entity.Profil;
+import entity.Annonce;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -14,20 +14,21 @@ import javax.ejb.Local;
  * @author Lahat
  */
 @Local
-public interface IProfilSessionBean {
+public interface IAnnonce {
 
-    void create(Profil profil);
+    void create(Annonce annonce);
 
-    void edit(Profil profil);
+    void edit(Annonce annonce);
 
-    void remove(Profil profil);
+    void remove(Annonce annonce);
 
-    Profil find(Object id);
+    Annonce find(Object id);
 
-    List<Profil> findAll();
+    List<Annonce> findAll();
 
-    List<Profil> findRange(int[] range);
+    List<Annonce> findRange(int[] range);
 
     int count();
+    
     
 }
