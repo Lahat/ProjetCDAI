@@ -29,13 +29,11 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Annonce.findByIdannonce", query = "SELECT a FROM Annonce a WHERE a.idannonce = :idannonce")
     , @NamedQuery(name = "Annonce.findByRestaurateur", query = "SELECT a FROM Annonce a WHERE a.restaurateur = :restaurateur")
     , @NamedQuery(name = "Annonce.findByRestaurant", query = "SELECT a FROM Annonce a WHERE a.restaurant = :restaurant")
-    , @NamedQuery(name = "Annonce.findByIdmenu", query = "SELECT a FROM Annonce a WHERE a.idmenu = :idmenu")
     , @NamedQuery(name = "Annonce.findByPlagedispo", query = "SELECT a FROM Annonce a WHERE a.plagedispo = :plagedispo")
     , @NamedQuery(name = "Annonce.findByDatededispo", query = "SELECT a FROM Annonce a WHERE a.datededispo = :datededispo")
     , @NamedQuery(name = "Annonce.findByReduction", query = "SELECT a FROM Annonce a WHERE a.reduction = :reduction")
     , @NamedQuery(name = "Annonce.findByPourcreduction", query = "SELECT a FROM Annonce a WHERE a.pourcreduction = :pourcreduction")
-    , @NamedQuery(name = "Annonce.findByIdtelephone", query = "SELECT a FROM Annonce a WHERE a.idtelephone = :idtelephone")
-    , @NamedQuery(name = "Annonce.findByIdemail", query = "SELECT a FROM Annonce a WHERE a.idemail = :idemail")})
+    , @NamedQuery(name = "Annonce.findByNbreplacedispo", query = "SELECT a FROM Annonce a WHERE a.nbreplacedispo = :nbreplacedispo")})
 public class Annonce implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -50,8 +48,6 @@ public class Annonce implements Serializable {
     @Size(max = 45)
     @Column(name = "restaurant")
     private String restaurant;
-    @Column(name = "idmenu")
-    private Short idmenu;
     @Size(max = 45)
     @Column(name = "plagedispo")
     private String plagedispo;
@@ -64,10 +60,8 @@ public class Annonce implements Serializable {
     @Size(max = 45)
     @Column(name = "pourcreduction")
     private String pourcreduction;
-    @Column(name = "idtelephone")
-    private Short idtelephone;
-    @Column(name = "idemail")
-    private Short idemail;
+    @Column(name = "nbreplacedispo")
+    private Serializable nbreplacedispo;
 
     public Annonce() {
     }
@@ -98,14 +92,6 @@ public class Annonce implements Serializable {
 
     public void setRestaurant(String restaurant) {
         this.restaurant = restaurant;
-    }
-
-    public Short getIdmenu() {
-        return idmenu;
-    }
-
-    public void setIdmenu(Short idmenu) {
-        this.idmenu = idmenu;
     }
 
     public String getPlagedispo() {
@@ -140,20 +126,12 @@ public class Annonce implements Serializable {
         this.pourcreduction = pourcreduction;
     }
 
-    public Short getIdtelephone() {
-        return idtelephone;
+    public Serializable getNbreplacedispo() {
+        return nbreplacedispo;
     }
 
-    public void setIdtelephone(Short idtelephone) {
-        this.idtelephone = idtelephone;
-    }
-
-    public Short getIdemail() {
-        return idemail;
-    }
-
-    public void setIdemail(Short idemail) {
-        this.idemail = idemail;
+    public void setNbreplacedispo(Serializable nbreplacedispo) {
+        this.nbreplacedispo = nbreplacedispo;
     }
 
     @Override
@@ -179,10 +157,6 @@ public class Annonce implements Serializable {
     @Override
     public String toString() {
         return "entity.Annonce[ idannonce=" + idannonce + " ]";
-    }
-
-    public void setNbreplacedispo(String nbreplacedispo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

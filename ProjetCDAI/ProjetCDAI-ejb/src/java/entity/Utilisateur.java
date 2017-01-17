@@ -32,7 +32,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Utilisateur.findByTelephone", query = "SELECT u FROM Utilisateur u WHERE u.telephone = :telephone")
     , @NamedQuery(name = "Utilisateur.findByAdresse", query = "SELECT u FROM Utilisateur u WHERE u.adresse = :adresse")
     , @NamedQuery(name = "Utilisateur.findByEmail", query = "SELECT u FROM Utilisateur u WHERE u.email = :email")
-    , @NamedQuery(name = "Utilisateur.findByMotdepasse", query = "SELECT u FROM Utilisateur u WHERE u.motdepasse = :motdepasse")})
+    , @NamedQuery(name = "Utilisateur.findByMotdepasse", query = "SELECT u FROM Utilisateur u WHERE u.motdepasse = :motdepasse")
+    , @NamedQuery(name = "Utilisateur.findByProfil", query = "SELECT u FROM Utilisateur u WHERE u.profil = :profil")})
 public class Utilisateur implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -60,6 +61,8 @@ public class Utilisateur implements Serializable {
     @Size(max = 45)
     @Column(name = "motdepasse")
     private String motdepasse;
+    @Column(name = "profil")
+    private Serializable profil;
 
     public Utilisateur() {
     }
@@ -122,6 +125,14 @@ public class Utilisateur implements Serializable {
 
     public void setMotdepasse(String motdepasse) {
         this.motdepasse = motdepasse;
+    }
+
+    public Serializable getProfil() {
+        return profil;
+    }
+
+    public void setProfil(Serializable profil) {
+        this.profil = profil;
     }
 
     @Override
