@@ -5,7 +5,7 @@
  */
 package ejb;
 
-import entity.Utilisateur;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,5 +28,18 @@ public class UtilisateurSessionBean extends AbstractFacade<Utilisateur> implemen
     public UtilisateurSessionBean() {
         super(Utilisateur.class);
     }
+
+    @Override
+    public void createUser(String name, String firstName, String phone, String address, String mail, String password, String profil) {
+        Utilisateur user = new Utilisateur();
+        user.setNom(name);
+        user.setPrenom(firstName);
+        user.setTelephone(phone);
+        user.setAdresse(address);
+        user.setEmail(mail);
+        user.setMotdepasse(password);
+        user.setProfil(profil);
+    }
+    
     
 }

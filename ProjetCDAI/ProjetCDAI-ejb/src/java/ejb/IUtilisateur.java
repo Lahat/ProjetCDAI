@@ -5,7 +5,7 @@
  */
 package ejb;
 
-import entity.Utilisateur;
+
 import java.util.List;
 import javax.ejb.Local;
 
@@ -15,6 +15,8 @@ import javax.ejb.Local;
  */
 @Local
 public interface IUtilisateur {
+    
+    public void createUser(String name, String firstName, String phone, String address, String mail, String password, String profil);
 
     void create(Utilisateur utilisateur);
 
