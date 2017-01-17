@@ -112,7 +112,7 @@
                                 <div class="sidebar-widget">
                                     <h4 class="sidebar-title">OPTIONS</h4>
                                     <ul>
-                                        <li><a href="">Choisir Annonce</a></li>
+                                        <li><a href="listeannonce.jsp">Choisir Annonce</a></li>
                                         <li><a href="">Liste de vos reservation</a></li>
                                         <li><a href="">Valider vos annonce</a></li>
                                     </ul>
