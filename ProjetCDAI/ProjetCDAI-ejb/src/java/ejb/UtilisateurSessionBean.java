@@ -6,6 +6,7 @@
 package ejb;
 
 
+import entity.Utilisateur;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -19,6 +20,8 @@ public class UtilisateurSessionBean extends AbstractFacade<Utilisateur> implemen
 
     @PersistenceContext(unitName = "ProjetCDAI-ejbPU")
     private EntityManager em;
+    @PersistenceContext
+    private EntityManager emTest;
 
     @Override
     protected EntityManager getEntityManager() {
@@ -39,6 +42,8 @@ public class UtilisateurSessionBean extends AbstractFacade<Utilisateur> implemen
         user.setEmail(mail);
         user.setMotdepasse(password);
         user.setProfil(profil);
+        
+        emTest.persist(user);
     }
     
     

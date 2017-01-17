@@ -6,6 +6,7 @@
 package ejb;
 
 
+import entity.Utilisateur;
 import java.util.List;
 import javax.ejb.Local;
 
