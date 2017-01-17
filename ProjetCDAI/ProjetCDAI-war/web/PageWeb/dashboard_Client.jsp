@@ -57,7 +57,6 @@
 
 				<div class="collapse navbar-collapse" id="st-navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
-				    	<li><a href="">ANNONCES</a></li>
 				    	<li><a href="">LES MENUS</a></li>
 				    	<li><a href="">CONTACT</a></li>
                                         <li><a href="">SE DECONNECTER</a></li>
@@ -75,7 +74,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title">
-						<h4>Vous êtes connecté en tant que client</h4>
+						<h4>Vous pouvez ajouter des annonces dans cette section</h4>
 					</div>
 				</div>
 			</div>

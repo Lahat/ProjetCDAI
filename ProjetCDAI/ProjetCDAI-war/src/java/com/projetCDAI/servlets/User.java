@@ -5,8 +5,11 @@
  */
 package com.projetCDAI.servlets;
 
+
+import ejb.UserSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +20,9 @@ import javax.servlet.http.HttpServletResponse;
  * @author izilife
  */
 public class User extends HttpServlet {
+    
+    @EJB
+    private UserSession user;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -58,7 +64,7 @@ public class User extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        String name = request.getParameter("nom");
+        
     }
 
     /**
@@ -72,7 +78,19 @@ public class User extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        String name = request.getParameter("nom");
+        String firstName = request.getParameter("prenom");
+        String phone = request.getParameter("tel");
+        String address = request.getParameter("adresse");
+        String login = request.getParameter("login");
+        String password = request.getParameter("mdp");
+        String profil = request.getParameter("profil");
+                
+        user.createUser(name, firstName, phone, address, login, password, profil);             
+        
+        this.getServletContext().getRequestDispatcher("/PageWeb/connexion.jsp").forward(request, response);
+        
     }
 
     /**

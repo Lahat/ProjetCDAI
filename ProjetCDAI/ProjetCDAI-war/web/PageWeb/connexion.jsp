@@ -158,7 +158,11 @@
                                 <div class="sidebar-widget">
                                     <h4 class="sidebar-title">NOS PRODUITS</h4>
                                     <ul>
+<<<<<<< HEAD
                                         <li><a href="annonce.jsp">NOS ANNONCES</a></li>
+=======
+                                        <li><a href="listeannonce.jsp">NOS ANNONCES</a></li>
+>>>>>>> 3bbbf182e2a2d1ebc7d56d7543bf410ec00cf05c
                                         <li><a href="">NOS MENU</a></li>
                                         <li><a href="">NOS PLATS DU JOURS</a></li>
                                         <li><a href="">NOS SANDWICHS</a></li>

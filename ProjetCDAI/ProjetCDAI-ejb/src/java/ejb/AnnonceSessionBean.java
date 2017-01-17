@@ -28,5 +28,19 @@ public class AnnonceSessionBean extends AbstractFacade<Annonce> implements IAnno
     public AnnonceSessionBean() {
         super(Annonce.class);
     }
+
+    @Override
+    public void creerAnnonce(String restaurateur, String restaurant, String plagedispo, String nbreplacedispo, String datededispo, String reduction, String pourcreduction) {
+        Annonce an = new Annonce();
+        an.setRestaurateur(restaurateur);
+        an.setRestaurant(restaurant);
+        an.setPlagedispo(plagedispo);
+        an.setNbreplacedispo(nbreplacedispo);
+        an.setDatededispo(datededispo);
+        an.setReduction(reduction);
+        an.setPourcreduction(pourcreduction);
+        
+        em.persist(an);
+    }
     
 }
