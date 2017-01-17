@@ -794,20 +794,20 @@ exists or setup the property manually. For example like this:
     <target depends="compile,-library-inclusion-in-archive-weblogic,-library-inclusion-in-archive-by-user" name="library-inclusion-in-archive"/>
     <target if="is.jars.in.ejbjar" name="-library-inclusion-in-archive-by-user">
         <copyfiles files="${libs.primefaces.classpath}" todir="${build.classes.dir}"/>
-        <copyfiles files="${libs.Richefaces.classpath}" todir="${build.classes.dir}"/>
+        <copyfiles files="${file.reference.richfaces-api-3.3.3.Final.jar}" todir="${build.classes.dir}"/>
     </target>
     <target if="is.server.weblogic" name="-library-inclusion-in-archive-weblogic">
         <basename file="${libs.primefaces.classpath}" property="manifest.libs.primefaces.classpath"/>
-        <basename file="${libs.Richefaces.classpath}" property="manifest.libs.Richefaces.classpath"/>
+        <basename file="${file.reference.richfaces-api-3.3.3.Final.jar}" property="manifest.file.reference.richfaces-api-3.3.3.Final.jar"/>
         <manifest file="${build.ear.classes.dir}/META-INF/MANIFEST.MF" mode="update">
             <attribute name="Extension-List" value="jar-1 jar-2 "/>
             <attribute name="jar-1-Extension-Name" value="${manifest.libs.primefaces.classpath}"/>
-            <attribute name="jar-2-Extension-Name" value="${manifest.libs.Richefaces.classpath}"/>
+            <attribute name="jar-2-Extension-Name" value="${manifest.file.reference.richfaces-api-3.3.3.Final.jar}"/>
         </manifest>
     </target>
     <target depends="compile" name="library-inclusion-in-manifest">
         <copyfiles files="${libs.primefaces.classpath}" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${libs.Richefaces.classpath}" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${file.reference.richfaces-api-3.3.3.Final.jar}" todir="${dist.ear.dir}/lib"/>
         <manifest file="${build.ear.classes.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
     <target name="-copy-meta-inf">
