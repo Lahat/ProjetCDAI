@@ -138,9 +138,9 @@
 							<div class="post-video"><iframe width="560" height="315" src="https://www.youtube.com/watch?v=hcZDxomV7rA" frameborder="0" allowfullscreen></iframe></div>
 							<h4 class="post-title"><a href="">Une delice pour vous et pour votre famille.</a></h4>
 							<div class="post-article">
-                                                            Vous avez d&eacute;cid&eacute; d' inviter Ã  diner un membre de votre famille, inviter Ã  diner vos amis ou inviter Ã  diner un coll&eacute;gue.
-                                                            Que ce soit pour faire connaissance, pour le remercier, un diner de mariage, pour un repas de NoÃ«l, dans le cadre professionnel ou d'un dÃ®ner de charit&eacute; il faudra r&eacute;diger l'invitation pour que votre convive vous accompagne.
-                                                            Vous pourrez rechercher une annonce, faire la reservation en ligne. Pour donner envie aux convives d'Ãªtre pr&eacute;sents, rien de mieux qu'un restaurant reserv&eacute; Ã  l'avance.
+                                                            Vous avez d&eacute;cid&eacute; d' inviter à diner un membre de votre famille, inviter à diner vos amis ou inviter à diner un coll&eacute;gue.
+                                                            Que ce soit pour faire connaissance, pour le remercier, un diner de mariage, pour un repas de Noël, dans le cadre professionnel ou d'un dîner de charit&eacute; il faudra r&eacute;diger l'invitation pour que votre convive vous accompagne.
+                                                            Vous pourrez rechercher une annonce, faire la reservation en ligne. Pour donner envie aux convives d'être pr&eacute;sents, rien de mieux qu'un restaurant reserv&eacute; à l'avance.
                                                         </div>
 							<a href="" class="btn btn-readmore">Read More</a>
 						</article>
@@ -171,7 +171,7 @@
 					<div class="sidebar-widget">
 						<h4 class="sidebar-title">NOS PRODUITS</h4>
 						<ul>
-                                                        <li><a href="">NOS ANNONCES</a></li>
+                                                    <li><a href="PageWeb/annonce.jsp">NOS ANNONCES</a></li>
 							<li><a href="">NOS MENU</a></li>
 							<li><a href="">NOS PLATS DU JOURS</a></li>
 							<li><a href="">NOS SANDWICHS</a></li>
